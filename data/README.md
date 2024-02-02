@@ -2,7 +2,7 @@
   df_nodes.tsv and df_edges.tsv are the two datasets with outliers 
 
 ## cleaned data
-  df_cleaned_nodes.tsv and df_cleaned_edges.tsv are the two datasets without outliers
+  df_cleaned_nodes.tsv and df_cleaned_edges.tsv are the two cleaned datasets without outliers
 
 ## data encoding
   in case of categorical variables, 0 represents missing value <br/>

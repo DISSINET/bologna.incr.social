@@ -1,0 +1,507 @@
+"name"	"label"	"sex"	"churchperson"	"middling"	"family_id"	"cathar_aff"	"apostle_aff"	"other_heterodoxy_aff"	"deponent"	"redeponent"	"ever_summoned"	"ever_pledged"	"ever_incarcerated"	"ever_tortured"	"inq_FV"	"inq_GV"	"inq_GP"	"inq_BdF"
+"P0377"	"Bonacursius de Florentia"	1	0	1	1	0	0	1	1	0	1	1	0	0	0	0	1	0
+"P0510"	"Cursius Neri Bonelle de Florentia"	1	0	1	2	1	0	0	0	0	0	1	0	0	0	1	0	0
+"P0562"	"Donatus Partis de Florentia"	1	0	1	3	1	0	0	1	1	1	1	0	1	0	1	0	0
+"P0748"	"Gratiadeus de Ripa de Mantua"	1	0	1	4	0	0	1	1	0	1	1	0	0	1	1	0	0
+"P1404"	"Paulus dominus Trintinelli"	1	0	1	5	0	0	1	0	0	1	0	0	0	0	1	0	0
+"P1756"	"Ugutius dominus Tetalasina"	1	0	1	6	0	0	1	0	0	0	0	0	0	0	1	0	0
+"P0003"	"Acursius"	1	0	1	9	0	0	0	0	0	0	0	0	0	0	1	0	0
+"P0009"	"Adelecta de Solegnano"	0	0	0	14	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P0017"	"Agnexia Nasinbenis"	0	0	0	22	1	0	0	0	0	0	0	0	0	0	1	0	0
+"P0020"	"Agnex"	0	1	0	25	0	0	1	0	0	0	0	0	0	0	1	0	0
+"P0032"	"Albergiptus"	1	1	0	37	0	0	0	1	0	0	0	0	0	0	1	1	0
+"P0033"	"Albergiptus de Monçorgio"	1	0	0	38	0	1	0	1	0	1	0	0	0	0	0	1	0
+"P0041"	"Albertinus de Ollis"	1	0	0	46	0	1	0	1	0	1	0	0	0	0	0	1	0
+"P0046"	"Albertinus"	1	0	0	51	0	1	0	0	0	0	0	0	0	0	1	0	0
+"P0048"	"Albertinus de Apoxa"	1	1	0	53	0	0	0	1	0	1	0	0	0	0	1	0	0
+"P0050"	"Albertinus de Varignana"	1	1	0	55	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P0052"	"Albertus de Adygheriis"	1	0	0	57	1	0	0	0	0	0	0	0	0	0	1	0	0
+"P0055"	"Albertus de Bayso"	1	1	0	60	0	0	1	0	0	0	0	0	0	0	1	0	0
+"P0056"	"Albertus"	1	0	1	61	0	0	1	0	0	0	0	0	0	0	1	0	0
+"P0057"	"Albertus de Lanceis"	1	0	1	62	0	0	1	1	0	1	0	0	0	0	1	0	0
+"P0059"	"Albertus"	1	0	1	64	1	0	0	0	0	0	0	0	0	0	1	0	0
+"P0060"	"Albertus Carbonis"	1	0	1	65	0	0	0	1	0	0	0	0	0	0	1	0	0
+"P0061"	"Albertus de Cazanimicis"	1	0	0	66	1	0	0	0	0	0	0	0	0	0	1	0	0
+"P0063"	"Albertus Ferarexe"	1	0	0	68	0	0	1	0	0	0	0	0	0	0	1	0	0
+"P0067"	"Albertus de Olmo"	1	0	0	72	0	1	0	0	0	0	0	0	0	0	1	0	0
+"P0069"	"Albertus de Trento"	1	0	0	74	0	1	0	0	0	0	0	0	0	0	1	1	0
+"P0071"	"Aldrevandinus de Aglano"	1	0	0	76	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P0072"	"Aldrevandinus de Montebellio"	1	0	0	77	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P0074"	"Aldrevandinus de Rodiano"	1	0	0	79	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P0080"	"Allamaninus"	1	0	0	84	1	0	0	0	0	0	0	0	0	0	1	0	0
+"P0087"	"Amadore"	1	0	1	91	0	0	1	0	0	0	0	0	0	0	1	0	0
+"P0091"	"Amicus Pacis"	1	0	1	95	0	0	0	1	0	1	0	0	0	0	1	0	0
+"P0093"	"Andalo de Fabianis"	1	0	0	97	0	0	0	1	0	0	0	0	0	0	1	0	0
+"P0094"	"Andaloes de terra Canevelle"	1	0	0	98	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P0102"	"Andreas Iohannis"	1	0	1	106	0	0	1	0	0	0	0	0	0	0	1	1	0
+"P0104"	"Andreas de Florentia"	1	0	0	108	0	0	1	0	0	0	0	0	0	0	1	0	0
+"P0106"	"Andreas de Burgo S. Sepulcri"	1	1	0	110	0	0	0	1	0	1	0	0	0	0	0	1	0
+"P0110"	"Andriolus Bompetri"	1	0	0	114	0	0	0	1	0	0	0	0	0	0	1	0	0
+"P0115"	"Angeleria Guidolini"	0	0	0	119	0	0	0	1	0	1	0	0	0	0	1	0	0
+"P0116"	"Ansalon de Monçorgio"	1	0	0	120	0	1	0	1	0	1	0	0	0	0	1	0	0
+"P0117"	"Ansvysia de Fregnano"	0	0	0	121	0	1	0	0	0	0	0	0	0	0	1	1	0
+"P0118"	"Ansvisya de Mutina"	0	0	0	122	0	1	0	0	0	0	0	0	0	0	1	0	0
+"P0123"	"Anthonius de Feraria"	1	1	0	127	0	0	0	1	0	1	0	0	0	0	1	0	0
+"P0124"	"Anthonius de Parma"	1	0	0	128	1	0	0	0	0	0	0	0	0	0	1	0	0
+"P0125"	"Anthonius"	1	0	1	129	0	0	1	0	0	0	0	0	0	0	1	0	0
+"P0126"	"Anthonius de Plumatio"	1	0	0	130	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P0129"	"Antilia"	0	0	0	133	1	0	0	0	0	0	0	0	0	0	1	0	0
+"P0142"	"Attolinus de Castlerano de Regio"	1	0	0	144	0	0	1	1	0	1	1	0	0	0	1	0	0
+"P0145"	"Avancius de Funi"	1	0	0	147	1	0	0	0	0	1	1	0	0	0	1	0	0
+"P0147"	"Avenente de Prato"	0	0	0	149	1	0	0	0	0	0	0	0	0	0	1	0	0
+"P0161"	"Betholinus Blaxii de Mançolino"	1	0	0	163	0	0	0	1	0	0	0	0	0	0	1	0	0
+"P0165"	"Bartholinus Petri Balugani de Plumatio"	1	0	0	167	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P0167"	"Bertholinus Truglonis de Montebellio"	1	0	0	169	0	0	0	0	0	0	0	0	0	0	0	1	0
+"P0178"	"Bartholomea de Bochadeferris"	0	0	0	179	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P0183"	"Bartholomea Petri Rubey de Savigno"	0	1	0	183	0	1	0	1	0	1	1	0	0	0	0	1	1
+"P0184"	"Bartholomea de Plumatio"	0	0	0	184	0	1	0	0	0	0	0	0	0	0	1	1	1
+"P0186"	"Bartholomea de Solegnano"	0	0	0	186	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P0195"	"Bartholomeus Yvani"	1	0	0	195	0	0	1	1	0	1	0	0	0	0	1	0	0
+"P0197"	"Bertholomeus de Lanceis"	1	0	0	197	0	0	0	1	0	1	0	0	0	0	1	0	0
+"P0199"	"Bartholomeus de Medicis de Regio"	1	1	0	199	0	0	0	1	0	1	0	0	0	0	1	0	0
+"P0204"	"Bartholomeus"	1	1	0	203	0	0	1	1	0	1	0	0	0	0	1	0	0
+"P0206"	"Bartholomeus de Samolis"	1	0	0	205	0	0	0	1	0	1	0	0	0	0	1	0	0
+"P0214"	"Bartholus de Massa S. Petri"	1	1	0	212	0	1	0	1	0	1	0	0	0	0	0	1	0
+"P0218"	"Beatrix de Florencia"	0	0	0	216	1	0	0	0	0	0	0	0	0	0	1	0	0
+"P0219"	"Beatrix de Sassolo"	0	0	0	217	0	1	0	0	0	0	0	0	0	0	0	0	1
+"P0220"	"Beatrixa Ardicionis"	0	0	0	218	0	0	0	0	0	0	0	0	0	0	0	1	0
+"P0221"	"Beatrixia Martini"	0	0	0	219	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P0223"	"Beatrixia"	0	0	0	220	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P0224"	"Beatrixia Clerici"	0	0	0	77	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P0226"	"Beatrixia de Bochadeferris"	0	0	0	179	0	1	0	1	0	1	0	0	0	0	0	1	1
+"P0228"	"Beatrixia Menaboi"	0	0	0	223	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P0230"	"Beatrixia de Casanello"	0	0	0	225	0	1	0	0	0	0	0	0	0	0	0	0	1
+"P0240"	"Bellucia"	0	0	0	234	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P0245"	"Benasuta de Verona"	0	0	0	239	0	0	1	1	0	0	0	0	0	0	1	0	0
+"P0246"	"Benata Boni"	0	0	0	114	1	0	0	0	0	0	0	0	0	0	1	0	0
+"P0251"	"Benedictus"	1	1	0	244	0	1	0	1	0	1	0	0	0	0	0	1	0
+"P0252"	"Benedictus de Cummis"	1	0	1	245	0	0	0	1	0	0	0	0	0	0	1	0	0
+"P0253"	"Benedictus Fantini de Mongorgio"	1	0	0	246	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P0255"	"Benedictus Mulnarii de Collina de Monçorgio"	1	1	0	248	0	1	0	0	0	0	0	0	0	0	1	0	1
+"P0259"	"Benincasa Martini Gaglari"	1	1	0	252	0	0	0	1	1	1	0	0	0	0	1	0	0
+"P0263"	"Benvenuta Truglonis"	0	0	0	169	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P0270"	"Benvenuta de Blanchis"	0	0	0	261	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P0273"	"Benvenuta de Monçorgio"	0	1	0	264	0	1	0	0	0	0	0	0	0	0	1	0	0
+"P0276"	"Benvenuta de Plumatio"	0	0	0	267	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P0277"	"Benvenuta de S. Çexario"	0	0	0	268	0	1	0	0	0	0	0	0	0	0	0	0	1
+"P0283"	"Benvenutus"	1	1	0	273	0	0	1	0	0	0	0	0	0	0	1	0	0
+"P0290"	"Benvenutus de Blanchis de S. Helena"	1	0	0	261	0	1	0	1	1	1	0	0	0	0	0	1	0
+"P0291"	"Benvenutus Magnani"	1	0	0	280	0	0	1	0	0	0	0	0	0	0	1	0	0
+"P0297"	"Benvenutus Truglonis de Montebellio"	1	0	0	286	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P0298"	"Benvenutus"	1	0	0	287	1	0	0	0	0	0	0	0	0	0	1	0	0
+"P0300"	"Berardus"	1	0	0	289	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P0310"	"Bernardinus de Bochadeferris de Plumatio"	1	0	0	299	0	0	0	0	0	0	0	0	0	0	0	1	0
+"P0311"	"Bernardinus de Bononia de burgo S. Felicis"	1	0	1	300	0	1	0	0	0	0	0	0	0	0	1	1	0
+"P0314"	"Bernardinus de Monte Vallaro"	1	0	0	303	0	1	0	0	0	0	0	0	0	0	1	1	0
+"P0315"	"Bernardinus de Regio"	1	1	0	304	0	0	0	1	0	1	0	0	0	0	1	0	0
+"P0321"	"Berta de terra Canevelle"	0	0	0	98	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P0322"	"Berta Savii"	0	0	0	310	0	1	0	0	0	0	0	0	0	0	0	0	1
+"P0323"	"Berta Guarini de Plumatio"	0	0	0	311	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P0329"	"Bertucius de Armis"	1	0	0	317	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P0331"	"Bexe"	0	0	0	319	0	0	1	0	0	0	0	0	0	0	1	0	0
+"P0346"	"Bitinus Çannis"	1	0	0	334	0	1	0	1	1	0	0	0	0	0	0	1	0
+"P0350"	"Blaxius Maglavache"	1	0	0	338	0	0	1	0	0	0	0	0	0	0	1	0	0
+"P0353"	"Blasius de Monçorgio"	1	0	0	341	0	1	0	1	1	1	0	0	0	0	1	1	0
+"P0360"	"Bolnexa de Chasi"	0	0	0	348	1	0	0	0	0	0	0	0	0	0	1	0	0
+"P0364"	"Bompetrus Iohannis"	1	0	1	114	1	0	0	1	1	1	0	1	1	0	1	0	0
+"P0371"	"Bona de Ostis"	0	0	0	358	0	1	0	0	0	0	0	0	0	0	0	1	1
+"P0380"	"Bonafides"	1	0	0	366	1	0	0	0	0	0	0	0	0	0	1	0	0
+"P0381"	"Bonafigla"	0	0	0	367	1	0	0	0	0	0	0	0	0	0	1	0	0
+"P0383"	"Bonagratia"	1	1	0	369	0	1	0	0	0	0	0	0	0	0	1	1	0
+"P0384"	"Bonaiutus"	1	0	0	370	1	0	0	0	0	0	0	0	0	0	1	0	0
+"P0385"	"Bonamicus Martini de Lorentiis de Castro Novo"	1	0	0	219	0	1	0	1	0	1	1	0	0	0	0	1	0
+"P0386"	"Bonaminus de Parma"	1	0	0	128	1	0	0	0	0	0	0	0	0	0	1	0	0
+"P0393"	"Bonaventura Donusdey de Bonçagnis"	0	0	0	377	0	0	0	1	0	0	0	0	0	0	1	0	0
+"P0397"	"Bonavitta de Florencia"	1	0	0	381	0	1	0	0	0	0	0	0	0	0	1	0	0
+"P0399"	"Bondi Belondi"	1	1	0	383	0	1	0	1	1	1	0	0	0	0	0	1	0
+"P0402"	"Bondi Sassolini de Montebellio"	1	0	0	384	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P0404"	"Bondiolus"	1	0	0	386	0	0	0	1	0	1	0	0	0	0	1	0	0
+"P0405"	"Bondiucius Salvetti"	1	1	0	387	0	0	0	1	0	1	0	0	0	0	0	1	0
+"P0406"	"Bondominicus Benintendi"	1	0	0	388	0	0	1	0	0	0	0	0	0	0	1	0	0
+"P0409"	"Bonfiglolus Ferarixii de terra S. Martini in Argele"	1	0	0	68	0	0	1	1	0	1	0	0	0	0	1	0	0
+"P0414"	"Bonifacius"	1	1	0	395	0	0	0	1	0	0	0	0	0	0	1	0	0
+"P0415"	"Bonifacius Henrigucii de Galluciis"	1	1	0	396	0	0	0	1	0	1	0	0	0	0	0	1	0
+"P0417"	"Bonigrinus de Cisano de Verona"	1	0	0	367	1	0	0	1	1	1	1	0	0	1	1	0	0
+"P0420"	"Boninsegna de Montebellio"	1	0	0	400	0	1	0	1	0	1	0	0	0	0	0	1	0
+"P0425"	"Bonmeiore Alberti de Arichalcho"	1	0	0	405	0	0	0	1	0	1	0	0	0	0	1	0	0
+"P0428"	"Bonus"	1	1	0	408	0	0	1	1	0	1	0	0	0	0	1	0	0
+"P0431"	"Bonus de Florentia"	1	0	1	411	0	0	1	1	0	1	1	0	0	0	0	1	0
+"P0433"	"Bonvixina de Ollis"	0	0	0	46	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P0434"	"Bonvixina de Ponçano de Monçorgio"	0	0	0	413	0	1	0	1	0	1	1	0	0	0	0	1	0
+"P0437"	"Borgha Hettoli"	0	1	0	416	0	0	1	1	0	0	0	0	0	0	1	0	0
+"P0446"	"Brigata de Truglonibus"	0	0	0	425	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P0449"	"Brunetta"	0	0	0	427	1	0	0	0	0	0	0	0	0	0	1	0	0
+"P0450"	"Brunettus Henrigipti Basenghi de Plumatio"	1	0	0	428	0	0	0	1	0	1	0	0	0	0	0	1	0
+"P0452"	"Brunettus de Ferro de Florencia"	1	0	0	430	0	0	0	1	0	0	0	0	0	0	1	0	0
+"P0459"	"Buvalellus de Buvalellis"	1	0	0	437	1	0	0	0	0	0	0	0	0	0	1	0	0
+"P0461"	"Cambius Laçari de burgo Galerie"	1	1	0	439	0	0	0	1	0	0	0	0	0	0	1	0	0
+"P0465"	"Catania Iohannis"	0	0	0	261	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P0470"	"Cecilia de Florentia"	0	0	0	3	1	0	0	0	0	0	0	0	0	0	1	0	0
+"P0475"	"Chabriel de terra S. Martini in Arçele"	1	0	0	451	0	0	1	0	0	0	0	0	0	0	1	0	0
+"P0478"	"Chaltinus de terra S. Martini"	1	0	0	454	0	0	1	0	0	0	0	0	0	0	1	0	0
+"P0479"	"Chara de Sellis de Mutina"	0	0	0	455	0	1	0	0	0	0	0	0	0	0	1	1	0
+"P0488"	"Clerighinus de Bochadeferris de Plumatio"	1	0	0	464	0	0	0	0	0	0	0	0	0	0	0	1	0
+"P0492"	"Constantinus"	1	0	1	114	1	0	0	0	0	0	0	0	0	1	1	0	0
+"P0496"	"Contessa Iohannis Constantini"	0	0	1	114	1	0	0	1	1	1	0	0	0	0	1	0	0
+"P0498"	"Contessa de Prato"	0	0	0	470	1	0	0	0	0	0	0	0	0	0	1	0	0
+"P0500"	"Controlus de la Mane de Plumatio"	1	0	0	259	0	0	0	0	0	0	0	0	0	0	0	1	0
+"P0502"	"Coradinus de Parma"	1	1	0	473	0	0	0	1	0	1	0	0	0	0	1	0	0
+"P0504"	"Corbellus Clerici de Montebellio"	1	0	0	77	0	1	0	1	0	1	0	0	0	0	0	1	0
+"P0505"	"Corbicinus Benvenuti de Gaglano"	1	0	0	475	0	0	0	1	0	0	0	0	0	0	1	0	0
+"P0506"	"Cortexe Ravignani"	0	0	0	476	0	0	1	0	0	1	1	0	0	0	1	0	0
+"P0507"	"Corvolus Gualbertucii"	1	1	0	477	0	1	0	1	1	1	0	0	0	0	1	1	0
+"P0512"	"Damianus Benvenuti de Blanchis de S. Helena"	1	0	0	261	0	1	0	1	1	1	1	0	0	0	1	1	0
+"P0518"	"Deolay de Balugola"	1	0	0	486	0	1	0	0	0	0	0	0	0	0	1	1	0
+"P0521"	"Deotesalvi Recupri"	1	0	0	489	0	0	0	1	0	1	0	0	0	0	1	0	0
+"P0531"	"Dinus de Floranis"	1	0	1	499	0	0	0	0	0	0	0	0	0	0	0	1	0
+"P0534"	"Divicia Alexandri Bochaderospo"	0	0	0	81	1	0	0	0	0	0	0	0	0	0	1	0	0
+"P0538"	"Doctinus"	1	1	0	505	0	1	0	0	0	0	0	0	0	0	0	0	1
+"P0539"	"Dolcebona de Feraria"	0	0	1	114	1	0	0	0	0	0	0	0	0	0	1	0	0
+"P0540"	"Dolcinus de Novaria"	1	0	0	506	0	1	0	0	0	0	0	0	0	0	1	1	1
+"P0543"	"Domineghellus Bolnixii Ferarexe de terra S. Martini in Argele"	1	0	0	68	0	0	1	0	0	1	0	0	0	0	1	0	0
+"P0544"	"Dominica Stephani de La Rovore de terra Rovoretoli"	0	0	0	509	0	0	0	1	0	1	0	0	0	0	0	1	0
+"P0556"	"Dominicus"	1	0	0	520	0	1	0	0	0	0	0	0	0	0	0	0	1
+"P0566"	"Dondideus de burgo Nosadelle"	1	0	1	529	0	0	1	0	0	0	0	0	0	0	1	0	0
+"P0570"	"Egidia Partinopei de Ferraria de Malavoltis"	0	0	0	533	1	0	0	0	0	0	0	0	0	0	1	0	0
+"P0578"	"Faciolus Lambertini"	1	1	1	540	0	1	0	0	0	0	0	0	0	0	1	1	0
+"P0583"	"Faxanna"	0	0	0	545	0	1	0	0	0	0	0	0	0	0	0	0	1
+"P0595"	"Florina"	0	0	0	557	0	1	0	0	0	0	0	0	0	0	0	0	1
+"P0599"	"Formentinus de Mediolano"	1	1	0	561	0	1	0	1	0	1	0	0	0	0	0	1	0
+"P0603"	"Francisca Francisci Petri Zacharie"	0	0	0	20	0	1	0	1	0	1	1	0	0	0	0	1	0
+"P0605"	"Francisca Gerardini"	0	0	0	566	0	1	0	0	0	0	0	0	0	0	0	0	1
+"P0608"	"Francisca Prevedini de Plumatio"	0	0	0	569	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P0610"	"Francischa Ugolini"	0	0	0	571	0	1	0	0	0	0	0	0	0	0	0	0	1
+"P0611"	"Francischa Çonis Chavalli de Musello"	0	0	0	572	0	0	0	1	1	1	0	0	0	0	0	1	0
+"P0627"	"Francischus Gerardelli de Butrio"	1	0	0	588	0	0	1	0	0	0	0	0	0	0	1	0	0
+"P0629"	"Franciscus Iacobi de Ghixleriis"	1	0	0	590	0	0	0	1	0	1	0	0	0	0	1	0	0
+"P0632"	"Francischus Iohannis de Blanchis de S. Helena"	1	0	0	261	0	1	0	0	0	1	0	0	0	0	0	1	0
+"P0633"	"Franciscus Marchi"	1	0	0	593	0	0	0	1	0	0	0	0	0	0	1	0	0
+"P0637"	"Franciscus"	1	1	0	597	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P0638"	"Francischus Pasqualis de Agubio"	1	0	1	598	0	0	1	0	0	1	0	0	0	0	1	0	0
+"P0646"	"Francischinus de S. Martino in Arçele"	1	0	0	605	0	0	1	0	0	1	0	0	0	0	1	0	0
+"P0656"	"Fredus de Boccadeferris de Plumatio"	1	0	0	615	0	1	0	0	0	0	0	0	0	0	0	0	1
+"P0663"	"Gallus Alberti de Florentia"	1	0	0	621	1	0	0	0	0	0	0	0	0	0	1	0	0
+"P0664"	"Galvanus"	1	0	0	622	1	0	0	0	0	0	0	0	0	0	1	0	0
+"P0671"	"Gentilis de Tuscia vel de Marchia"	1	0	0	629	0	0	1	0	0	0	0	0	0	0	1	0	0
+"P0672"	"Geppus Lamberti de Florentia"	1	0	1	630	0	0	0	1	0	1	0	0	0	0	1	0	0
+"P0677"	"Gerardinus"	1	1	0	635	0	0	0	1	0	1	0	0	0	0	1	0	0
+"P0680"	"Gerardinus de Monte Vallario"	1	1	0	638	0	1	0	0	0	0	0	0	0	0	0	0	1
+"P0682"	"Gerardinus"	1	1	0	640	0	1	0	1	0	1	0	0	0	0	1	0	0
+"P0684"	"Gerardinus"	1	0	0	642	0	1	0	0	0	0	0	0	0	0	0	0	1
+"P0685"	"Gerardinus Trugus de Monçorgio"	1	0	0	38	0	1	0	0	0	0	0	0	0	0	1	1	0
+"P0688"	"Gerarducius Petricini de Magagnolo de Monçorgio"	1	0	0	645	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P0690"	"Gerardus Albertini de Albertinatiis"	1	0	1	647	0	0	0	1	0	1	0	0	0	0	1	0	0
+"P0692"	"Gerardus Benvenuti de Blanchis de S. Helena"	1	0	0	261	0	1	0	1	0	1	0	0	0	0	0	1	0
+"P0700"	"Gerardus de Montobrario"	1	1	0	656	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P0701"	"Gerardus Petri Porcelli de Monte Ombrario"	1	0	0	657	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P0703"	"Gerardus de Riolo"	1	1	0	659	0	1	0	0	0	0	0	0	0	0	0	0	1
+"P0706"	"Gerardus Segarelli de Parma"	1	0	0	662	0	1	0	0	0	0	0	0	0	0	1	1	0
+"P0715"	"Ghina Petriçani"	0	0	0	670	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P0717"	"Ghisela"	0	1	0	672	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P0724"	"Ghixila de Casanello"	0	0	0	678	0	1	0	0	0	0	0	0	0	0	0	0	1
+"P0726"	"Ghixla"	0	0	0	680	1	0	0	0	0	0	0	0	0	0	1	0	0
+"P0731"	"Gilia Savii"	0	0	0	310	0	1	0	0	0	0	0	0	0	0	0	0	1
+"P0736"	"Gilius de Montebellio"	1	0	0	688	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P0742"	"Giunta Benvenuti"	0	0	0	261	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P0744"	"Gontus Taviani"	1	0	1	695	0	0	1	0	0	1	1	0	0	0	1	0	0
+"P0746"	"Gracias"	1	0	0	697	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P0755"	"Gualandus Guaraschi de Montebellio"	1	0	0	637	0	1	0	1	0	1	0	0	0	0	0	1	0
+"P0757"	"Guercius de Monçorgio"	1	0	0	706	0	0	0	0	0	0	0	0	0	0	0	1	0
+"P0761"	"Guidina de Samodia"	0	0	0	710	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P0766"	"Guido de Blanchis de S. Helena"	1	0	0	261	0	1	0	1	0	1	0	0	0	0	0	1	0
+"P0772"	"Guido Cistela de Mutina"	1	0	0	720	0	1	0	0	0	0	0	0	0	0	1	0	0
+"P0774"	"Guido de Figarolo"	1	0	1	722	1	0	0	0	0	0	0	0	0	0	1	0	0
+"P0784"	"Guido de Primadiciis"	1	0	0	732	0	0	0	1	0	1	0	0	0	0	1	0	0
+"P0791"	"Guidolinus Yvani"	1	1	0	739	0	0	0	1	0	1	0	0	0	0	1	1	0
+"P0794"	"Guidoctus Petri de Montebellio"	1	0	1	400	0	1	0	1	0	1	0	0	0	0	0	1	0
+"P0796"	"Guiducius de Plumatio"	1	0	0	743	0	0	0	0	0	0	0	0	0	0	0	1	0
+"P0797"	"Guillielmina de Plumatio"	0	0	0	184	0	1	0	0	0	0	0	0	0	0	1	1	0
+"P0807"	"Guillielmus Basalonus"	1	0	0	753	0	0	1	0	0	0	0	0	0	0	1	0	0
+"P0808"	"Guillielmus Benvenuti de Blanchis de S. Helena"	1	0	0	261	0	1	0	1	1	1	0	0	0	0	1	1	0
+"P0809"	"Guillielminus Blaxii"	1	0	0	754	0	0	0	1	0	1	0	0	0	0	1	0	0
+"P0821"	"Guillielmus de Mulnario de Monçorgio"	1	0	0	766	0	1	0	0	0	0	0	0	0	0	1	0	0
+"P0829"	"Guinicinus de Bonfantis"	1	0	0	774	0	0	1	0	0	0	0	0	0	0	1	0	0
+"P0832"	"Guicardinus de Mutina"	1	1	0	777	0	1	0	0	0	0	0	0	0	0	1	0	0
+"P0836"	"Henricus"	1	1	0	780	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P0839"	"Henricus Rolandini"	1	1	0	783	0	0	0	1	0	0	0	0	0	0	1	0	0
+"P0841"	"Henricus de Solegnano"	1	0	0	14	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P0848"	"Honesta"	0	1	0	791	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P0861"	"Iacobinus Bonincontri"	1	0	1	803	0	0	0	1	1	1	0	0	0	0	1	0	0
+"P0868"	"Iacobinus"	1	0	1	810	0	1	0	0	0	0	0	0	0	0	0	0	1
+"P0870"	"Iacobinus Parmensis de Pisceria"	1	1	0	812	1	0	0	0	0	0	0	0	0	0	1	0	0
+"P0873"	"Iacobinus de Columbis"	1	0	0	814	0	0	1	0	0	1	0	0	0	0	1	0	0
+"P0874"	"Iacobinus"	1	0	0	815	0	0	1	0	0	0	0	0	0	0	1	0	0
+"P0881"	"Iacobus Anthonii Piloxii"	1	0	1	822	0	0	1	1	1	0	0	0	0	0	1	0	0
+"P0883"	"Iacobus de Muxonibus"	1	0	1	824	0	0	1	0	0	1	0	0	0	0	1	0	0
+"P0889"	"Iacobus de Casadri"	1	1	0	830	0	0	1	1	0	1	1	0	0	0	1	0	0
+"P0893"	"Iacobus Bompetri"	1	0	0	114	0	0	1	1	1	0	0	0	0	0	1	0	0
+"P0894"	"Iacobus Bonaventure Lixingoli"	1	0	0	833	0	0	0	1	0	1	0	0	0	0	1	0	0
+"P0898"	"Iacobus"	1	1	0	837	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P0899"	"Iacobus Casottus"	1	1	0	838	0	0	0	1	0	0	0	0	0	0	1	0	0
+"P0900"	"Iacobus de Butrio"	1	0	1	839	0	0	0	0	0	0	0	0	0	0	1	0	0
+"P0901"	"Iacobus"	1	0	1	840	0	0	1	0	0	0	0	0	0	0	1	0	0
+"P0902"	"Iacobus de Columpa"	1	0	0	841	0	0	0	0	0	0	0	0	0	0	1	0	0
+"P0907"	"Iacobus Flamenghi"	1	1	0	846	0	0	1	0	0	0	0	0	0	0	1	0	0
+"P0911"	"Iacobus de Tuschis de Seravalle"	1	0	1	849	0	1	0	1	0	1	0	0	0	0	0	1	0
+"P0916"	"Iacobus Guidonis de Curionibus"	1	0	1	854	0	0	1	0	0	0	0	0	0	0	1	0	0
+"P0919"	"Iacobus Iacobi de Rodiano"	1	0	0	857	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P0924"	"Iacobus Tranchedi"	1	0	0	862	1	0	0	0	0	0	0	0	0	0	1	0	0
+"P0925"	"Iacobus Manteghellus"	1	0	1	863	0	1	0	1	1	1	0	0	0	0	0	1	0
+"P0926"	"Iacobus Merchandelli"	1	0	1	864	0	0	0	1	0	1	0	0	0	0	1	0	0
+"P0929"	"Iacobus de Nuce"	1	0	0	867	0	0	1	0	0	0	0	0	0	0	1	0	0
+"P0934"	"Iacobus Rasonatus de Plumacio"	1	0	0	872	0	0	0	0	0	0	0	0	0	0	0	1	0
+"P0936"	"Iacobus de Pistorio"	1	1	0	874	0	0	0	1	0	1	0	0	0	0	0	1	0
+"P0940"	"Iacobus"	1	1	0	878	0	0	0	1	0	1	1	0	0	0	0	1	0
+"P0941"	"Iacobus de S. Geminiano"	1	0	0	879	0	0	0	1	0	1	0	0	0	0	1	0	0
+"P0943"	"Iacobus de Rofeno"	1	0	0	881	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P0945"	"Iacobus Rolanducii"	1	0	1	883	0	0	0	1	0	1	0	0	0	0	1	0	0
+"P0946"	"Iacobus Silvestri de Anania"	1	0	0	884	0	0	0	0	0	0	0	0	0	0	0	1	0
+"P0948"	"Iacobus de Dosentola de Monte Bellio"	1	0	0	886	0	0	0	1	0	1	1	0	0	0	0	1	0
+"P0957"	"Iacobus de Plumatio"	1	0	0	895	0	0	0	1	0	1	1	0	0	0	0	1	0
+"P0959"	"Iacobus"	1	0	0	896	0	0	1	0	0	0	0	0	0	0	1	0	0
+"P0962"	"Iacomina de Plumatio"	0	0	0	899	0	0	0	0	0	0	0	0	0	0	0	0	1
+"P0966"	"Ymelda de Rodiano"	0	0	0	79	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P0982"	"Iohaninus de Rastilino de Plumatio"	1	0	0	917	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P0987"	"Iohamna Nicholay de Racorgiptis"	0	0	0	921	0	1	0	1	0	0	0	0	0	0	0	1	0
+"P0990"	"Iohamna Geri"	0	0	1	924	0	0	1	1	0	1	0	0	0	0	1	0	0
+"P0993"	"Iohanna de Parma"	0	0	0	128	1	0	0	1	0	1	0	0	0	0	1	0	0
+"P1001"	"Iohannes"	1	1	0	934	0	0	0	1	0	1	0	0	0	0	1	0	0
+"P1002"	"Iohannes de Alamannia"	1	1	0	935	0	0	0	0	0	0	0	0	0	0	0	1	0
+"P1004"	"Iohannes de Yberia"	1	1	0	937	0	1	0	1	1	1	0	0	0	0	0	0	1
+"P1005"	"Iohannes de Lirano de Plumatio"	1	0	0	938	0	1	0	1	1	1	0	0	0	0	0	1	0
+"P1006"	"Iohannes Çuffoli de Vetrana"	1	0	1	939	0	0	0	0	0	1	0	0	0	0	1	0	0
+"P1007"	"Iohannes"	1	1	0	940	0	0	0	1	0	1	0	0	0	0	1	0	0
+"P1010"	"Iohamnes Aççolini"	1	0	0	943	0	0	0	1	0	1	0	0	0	0	1	0	0
+"P1013"	"Iohannes Benvenuti de Blanchis de S. Helena"	1	0	0	261	0	1	0	1	0	1	0	0	0	0	0	1	0
+"P1014"	"Iohannes Bergognonus"	1	1	0	946	0	0	0	1	0	1	0	0	0	0	1	0	0
+"P1015"	"Iohannes Bernardini de Vallis de Monçorgio"	1	0	0	947	0	0	0	0	0	0	0	0	0	0	0	1	0
+"P1019"	"Iohannes Bonincontri de Plumatio"	1	0	0	259	0	1	0	0	0	0	0	0	0	0	0	1	1
+"P1021"	"Iohamnes Bonmerchati"	1	0	0	952	0	0	0	1	0	0	0	0	0	0	1	0	0
+"P1027"	"Iohannes Caldarii"	1	0	0	958	0	0	0	1	0	0	0	0	0	0	1	0	0
+"P1030"	"Iohamnes de Cassis"	1	0	0	961	0	0	0	1	0	1	0	0	0	0	1	0	0
+"P1036"	"Iohannes de Cento"	1	0	0	966	0	0	0	0	0	0	0	0	0	0	1	0	0
+"P1038"	"Iohannes de Feraria"	1	0	1	114	1	0	0	0	0	0	0	0	0	1	1	0	0
+"P1042"	"Iohamnes de burgo Galerie"	1	1	0	971	0	0	0	1	0	0	0	0	0	0	1	0	0
+"P1043"	"Iohannes dominus Gariboldus de Cremona"	1	1	0	972	0	0	0	1	0	1	0	0	0	0	1	0	0
+"P1045"	"Iohannes Trughi de Ponçano de Monçorgio"	1	0	0	38	0	1	0	0	0	0	0	0	0	0	1	1	0
+"P1046"	"Iohannes Ghinibaldi de Plumatio"	1	0	0	974	0	0	0	0	0	0	0	0	0	0	0	1	0
+"P1047"	"Iohamnes Gosberti"	1	1	0	975	0	0	0	1	0	0	0	0	0	0	1	0	0
+"P1049"	"Iohannes de Blanchis de S. Helena"	1	0	0	261	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P1056"	"Iohannes de Medola"	1	0	0	983	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P1062"	"Iohannes de Ostis"	1	0	0	358	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P1063"	"Iohannes de Çovençonibus"	1	0	0	989	0	0	0	1	0	0	0	0	0	0	1	0	0
+"P1065"	"Iohannes Paterius de Parma"	1	0	0	128	1	0	0	0	0	0	0	0	0	0	1	0	0
+"P1067"	"Iohamnes Pernus de Boateriis de Vetrana"	1	0	0	991	0	0	1	0	0	0	0	0	0	0	1	0	0
+"P1071"	"Iohannes de Montebellio"	1	0	1	400	0	0	0	0	0	0	0	0	0	0	0	1	0
+"P1073"	"Iohannes Petri de Çappolino"	1	1	0	995	0	1	0	1	1	1	0	0	0	0	0	1	0
+"P1075"	"Iohannes Petriçoli"	1	0	0	997	0	0	0	1	0	1	0	0	0	0	0	1	0
+"P1080"	"Iohannes de Porta"	1	0	0	1002	0	1	0	0	0	0	0	0	0	0	0	0	1
+"P1084"	"Iohannes Ribaldini"	1	0	1	1006	0	1	0	0	0	0	0	0	0	0	1	1	0
+"P1085"	"Iohannes de Rochis"	1	0	1	1007	0	0	0	0	0	0	0	0	0	0	1	0	0
+"P1086"	"Iohannes Goletti de Zapolino"	1	0	0	1008	0	1	0	0	0	0	0	0	0	0	1	0	0
+"P1098"	"Iohannes Zacharie Gerbini de Plumatio"	1	0	1	259	0	0	0	1	1	1	1	0	0	0	0	1	0
+"P1102"	"Iordaninus de Feraria"	1	0	0	114	1	0	0	0	0	0	0	0	0	0	1	0	0
+"P1115"	"Iulianus"	1	0	0	1032	0	0	1	1	0	0	0	0	0	0	1	0	0
+"P1118"	"Iulianus Saglimbene"	1	0	1	22	1	0	0	1	1	1	1	0	1	1	1	0	0
+"P1123"	"Lamandina Petricini"	0	0	0	1037	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P1125"	"Lambertinus de Ghixleriis"	1	0	0	1039	0	0	0	1	0	1	0	0	0	0	1	0	0
+"P1126"	"Lambertinus de Monçorgio"	1	0	0	1040	0	0	0	1	0	1	0	0	0	0	0	1	0
+"P1134"	"Lapus Chastelini de Florentia"	1	0	0	1048	0	0	0	1	0	0	0	0	0	0	1	0	0
+"P1145"	"Laçarina de Pede de Plumatio"	0	1	0	1058	0	1	0	1	1	1	0	0	0	0	0	1	1
+"P1147"	"Lentius Benvenuti"	1	0	0	1060	0	0	0	0	0	0	0	0	0	0	1	0	0
+"P1152"	"Lippus de Florencia"	1	0	0	216	1	0	0	0	0	0	0	0	0	0	1	0	0
+"P1154"	"Lixia Atioli"	0	0	0	1064	0	1	0	0	0	0	0	0	0	0	0	0	1
+"P1158"	"Longinus de Pergamo"	1	0	0	1068	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P1184"	"Manettus Munsili de Florentia"	1	0	1	1090	0	0	1	1	0	0	0	0	0	0	1	0	0
+"P1185"	"Manfredina de Parma"	0	0	1	128	1	0	0	0	0	0	0	0	0	0	1	0	0
+"P1187"	"Manfredinus de Campagnola de Regio"	1	1	0	1092	0	0	0	1	0	1	0	0	0	0	1	0	0
+"P1197"	"Manoellus de Bochadeferris de Plumatio"	1	0	0	299	0	0	0	0	0	0	0	0	0	0	0	1	0
+"P1198"	"Manstrucius"	1	0	0	1102	1	0	0	0	0	0	0	0	0	0	1	0	0
+"P1201"	"Mantuanus Menabois Piçoli"	1	0	0	1105	1	0	0	0	0	0	0	0	0	0	1	0	0
+"P1202"	"Manuel de Mutina"	1	0	0	1106	1	0	0	0	0	0	0	0	0	0	1	0	0
+"P1203"	"Mançolus de burgo Panicali"	1	0	0	1107	0	0	0	1	0	1	0	0	0	0	0	1	0
+"P1205"	"Marchexana Premartini de Plumatio"	0	0	0	20	0	1	0	1	0	1	1	0	0	0	0	1	0
+"P1210"	"Marchus Alfarini"	1	0	0	1113	0	0	0	1	0	1	0	0	0	0	1	0	0
+"P1211"	"Marchus Bonacii de Plumatio"	1	0	0	1114	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P1214"	"Margarita Sabadini de Solegnano"	0	0	0	1117	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P1215"	"Margarita Bitini Falchi"	0	0	0	1118	0	0	0	1	0	1	0	0	0	0	0	1	0
+"P1219"	"Margarita de Florencia"	0	0	0	1122	0	1	0	0	0	0	0	0	0	0	0	0	1
+"P1221"	"Margarita de Rodiano"	0	0	0	857	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P1225"	"Margarita de Plumatio"	0	0	0	1127	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P1230"	"Maria Scudelarii"	0	0	0	1131	0	0	0	0	0	0	0	0	0	0	1	0	0
+"P1231"	"Maria Trughi de Monçorgio de Montebellio"	0	0	0	38	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P1232"	"Maria Ghibertini de Costa de Monçorgio"	0	0	0	1132	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P1234"	"Maria"	0	1	0	1134	0	1	0	1	0	0	0	0	0	0	0	1	1
+"P1239"	"Maria de Mulnario de Monçorgio"	0	0	0	1139	0	1	0	0	0	0	0	0	0	0	1	0	0
+"P1240"	"Maria Petriçoli de Ostis"	0	0	0	358	0	1	0	1	0	1	0	0	0	0	0	1	0
+"P1241"	"Maria"	0	0	0	1140	0	1	0	1	0	1	0	0	0	0	0	1	0
+"P1243"	"Maria Ordelafi de Seravale"	0	0	0	1142	0	0	0	1	0	1	0	0	0	0	1	0	0
+"P1245"	"Maria de Vicentia"	0	0	0	1144	1	0	0	0	0	0	0	0	0	0	1	0	0
+"P1252"	"Martinellus"	1	0	1	1150	0	0	1	0	0	0	0	0	0	0	1	0	0
+"P1258"	"Martinus Yspanus"	1	1	1	1155	0	0	0	1	0	1	0	0	0	0	1	0	0
+"P1259"	"Martinus Savii"	1	0	0	1156	0	0	0	0	0	0	0	0	0	0	0	0	1
+"P1262"	"Martinus de S. Helena"	1	0	0	223	0	1	0	1	0	1	1	0	0	0	0	1	0
+"P1271"	"Matheus"	1	1	0	1167	0	0	0	0	0	0	0	0	0	0	1	0	0
+"P1272"	"Matheus de Columpa"	1	1	0	841	0	0	0	0	0	0	0	0	0	0	1	0	0
+"P1279"	"Matheus"	1	1	0	1174	0	0	0	1	0	0	0	0	0	0	1	0	0
+"P1289"	"Maxio"	1	1	0	1182	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P1290"	"Meglore Iuliani"	0	1	0	1183	0	0	1	1	0	0	0	0	0	0	1	0	0
+"P1295"	"Michael de Lirano de Plumatio"	1	0	0	938	0	1	0	0	0	0	0	0	0	0	0	1	1
+"P1297"	"Michael Bonlei de Ferraria"	1	0	0	1188	0	1	0	0	0	0	0	0	0	0	1	1	0
+"P1298"	"Michael Carlini"	1	0	0	1189	0	0	0	1	0	1	0	0	0	0	1	0	0
+"P1299"	"Michael de Rovoretolo"	1	0	0	1190	0	0	0	1	0	0	0	0	0	0	0	1	0
+"P1304"	"Michael Placente"	1	0	0	114	1	0	0	0	0	0	0	0	0	0	1	0	0
+"P1311"	"Milaninus Pastoris de Mediolano"	1	1	0	1198	0	0	0	1	0	1	0	0	0	0	1	0	0
+"P1322"	"Minius de Montebellio"	1	0	0	1209	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P1324"	"Monaletta de Florentia de Gondelmontibus"	0	0	0	2	1	0	0	0	0	0	0	0	0	0	1	0	0
+"P1333"	"Muçarellus de Capris de Monçorgio"	1	0	0	1219	0	0	0	0	0	0	0	0	0	0	0	1	0
+"P1334"	"Napheus"	1	0	0	1220	1	0	0	0	0	0	0	0	0	0	1	0	0
+"P1335"	"Nascimbene Adelardi"	1	1	0	1221	0	0	0	1	1	1	0	0	0	0	1	1	0
+"P1338"	"Nascimbene Bissolini de Plumatio"	1	0	0	1224	0	0	0	1	0	1	0	0	0	0	0	1	0
+"P1345"	"Nella Bonelle"	0	0	0	2	1	0	0	0	0	0	0	0	0	0	1	0	0
+"P1346"	"Nera de Florencia"	0	0	0	216	1	0	0	0	0	0	0	0	0	0	1	0	0
+"P1350"	"Nichola de Pixis"	1	0	1	1233	0	0	0	1	0	0	0	0	0	0	1	0	0
+"P1352"	"Nicholaus"	1	0	0	1235	0	0	0	0	0	0	0	0	0	0	0	1	0
+"P1353"	"Nicholaus de Migarano"	1	0	0	929	0	1	0	1	0	0	0	0	0	0	1	1	0
+"P1354"	"Nicholaus"	1	1	0	1236	0	0	1	0	0	0	0	0	0	0	1	0	0
+"P1355"	"Nicholaus de Bochadeferris de Plumatio"	1	0	0	299	0	0	0	0	0	0	0	0	0	0	0	1	0
+"P1357"	"Nicholaus de Ferraria"	1	0	0	1238	0	1	0	0	0	0	0	0	0	0	1	1	0
+"P1358"	"Nicholaus de Bonromeis"	1	0	0	1239	0	0	1	1	0	1	1	0	0	0	1	0	0
+"P1374"	"Oddo Laxagnoli"	1	0	1	1255	0	0	1	1	0	1	1	0	0	0	1	0	0
+"P1389"	"Parte de Ugiano"	1	0	1	1269	0	0	1	1	0	1	1	0	0	0	1	0	0
+"P1391"	"Pasqualis Clocli"	1	0	0	1271	0	1	0	0	0	0	0	0	0	0	0	0	1
+"P1394"	"Paulus Fregalossi"	1	1	0	1274	0	0	0	1	0	1	0	0	0	0	1	0	0
+"P1395"	"Paulus Chalanchus"	1	0	0	1275	0	0	1	0	0	0	0	0	0	0	1	0	0
+"P1399"	"Paulus de Roma"	1	0	0	1279	0	0	0	0	0	0	0	0	0	0	1	0	0
+"P1400"	"Paulus de S. Martino in Arçele"	1	0	0	1280	0	0	1	0	0	0	0	0	0	0	1	0	0
+"P1410"	"Pax Iohannis de Saliceto"	1	0	1	1126	0	0	0	1	0	1	0	0	0	0	1	0	0
+"P1413"	"Pax de Batagluciis"	1	1	0	1290	0	1	0	1	1	1	0	0	0	0	0	1	0
+"P1414"	"Paxolinus de Bononia"	1	0	0	1291	0	1	0	0	0	1	0	0	0	0	0	1	0
+"P1423"	"Petriçolus de Guerris de Regio"	1	0	1	1300	0	0	0	1	0	1	0	0	0	0	1	0	0
+"P1425"	"Petrobonus Aguçolus de Mutina"	1	0	0	1302	0	1	0	1	0	1	0	1	0	0	1	1	0
+"P1426"	"Petrobonus"	1	0	1	1303	0	0	1	0	0	0	0	0	0	0	1	0	0
+"P1432"	"Petrus de Ariminis"	1	0	0	1309	1	0	0	0	0	0	0	0	0	0	1	0	0
+"P1435"	"Petrus Bernardi"	1	0	0	1312	0	0	1	1	0	0	0	0	0	0	1	0	0
+"P1442"	"Petrus"	1	1	0	1319	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P1444"	"Petrus Dominici Dal Pra"	1	0	0	193	0	1	0	1	1	1	0	0	0	0	0	1	0
+"P1447"	"Petrus de Monte Umbraro"	1	0	0	1323	0	1	0	1	0	1	1	1	0	0	1	0	0
+"P1448"	"Petrus Pincii de terra S. Martini in Argele"	1	0	0	454	0	0	1	1	0	1	0	0	0	0	1	0	0
+"P1449"	"Petrus Trughi de Monçorgio"	1	0	0	38	0	1	0	0	0	0	0	0	0	0	1	1	0
+"P1452"	"Petrus Iacobini de Samolis"	1	0	0	1326	0	0	1	1	0	1	0	0	0	0	1	0	0
+"P1454"	"Petrus de Plumatio"	1	0	0	1328	0	0	0	1	0	1	0	0	0	0	0	1	0
+"P1457"	"Petrus Pelalalega"	1	0	0	1331	0	0	0	1	0	1	0	0	0	0	1	0	0
+"P1458"	"Petrus de Gaglano de Plumatio"	1	0	0	1332	0	0	0	1	0	1	1	0	0	0	0	1	0
+"P1461"	"Petrus de Mutina"	1	0	0	1334	1	0	0	0	0	0	0	0	0	0	1	0	0
+"P1474"	"Petrus Sacchus de S. Helena"	1	0	0	1345	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P1475"	"Petrus Saviolus de burgo Noxadelle"	1	0	0	1346	0	0	1	0	0	0	0	0	0	0	1	0	0
+"P1479"	"Petrus de Rodiano"	1	0	0	1350	0	0	0	1	0	1	0	0	0	0	0	1	0
+"P1480"	"Petrus Ugonis Sachi"	1	0	0	1351	0	0	1	0	0	0	0	0	0	0	1	0	0
+"P1486"	"Petrus"	1	0	1	1357	0	0	0	0	0	0	0	0	0	0	1	0	0
+"P1487"	"Petrus de Unçola"	1	0	1	1358	0	0	1	0	0	0	0	0	0	0	1	1	0
+"P1489"	"Petrus Vernicius"	1	0	1	1360	0	0	0	1	0	1	0	0	0	0	1	0	0
+"P1491"	"Petrus Zacharie de Plumatio"	1	0	0	20	0	1	0	0	0	0	0	0	0	0	0	1	1
+"P1492"	"Petrus Zancharrus"	1	1	0	1362	0	0	0	1	0	0	0	0	0	0	1	0	0
+"P1498"	"Phylippus de Sala"	1	0	1	1367	0	0	1	0	0	0	0	0	0	0	1	0	0
+"P1509"	"Phylippus de Pallagano"	1	0	0	1378	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P1510"	"Phylippus Pontii"	1	0	0	1379	0	0	0	0	0	0	0	0	0	0	1	0	0
+"P1514"	"Phylisinus de Libris"	1	0	0	1382	0	0	1	0	0	1	1	0	0	0	1	0	0
+"P1515"	"Pilliçarius de Pilliçariis"	1	0	0	1383	0	0	1	0	0	0	0	0	0	0	1	0	0
+"P1519"	"Placidia de Racorgiptis"	0	0	0	921	0	0	0	1	0	1	0	0	0	0	0	1	0
+"P1522"	"Primeria de Adygheriis"	0	0	0	57	1	0	0	0	0	0	0	0	0	0	1	0	0
+"P1523"	"Primeria de Castro Novo"	0	0	0	1389	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P1535"	"Raynerius"	1	1	0	1401	0	0	1	0	0	0	0	0	0	0	1	0	0
+"P1545"	"Ranfaldus Benvenuti"	1	0	1	1411	0	0	1	0	0	0	0	0	0	0	1	0	0
+"P1547"	"Ravenna"	0	0	0	2	1	0	0	0	0	0	0	0	0	0	1	0	0
+"P1548"	"Remedia Benvenuti de Blanchis de S. Helena"	0	0	0	261	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P1550"	"Rengarda de Adygheriis de Galuciis, Acursio"	0	0	0	57	1	0	0	1	0	1	1	0	0	0	1	0	0
+"P1551"	"Reçevutus"	1	0	1	1414	0	0	1	0	0	0	0	0	0	0	1	0	0
+"P1552"	"Richardinus de Casi"	1	0	0	1142	0	0	0	1	0	0	0	0	0	0	1	0	0
+"P1553"	"Richelda de Savigno de Plumatio"	0	0	0	1415	0	1	0	0	0	0	0	0	0	0	0	1	1
+"P1554"	"Richelda de Plumatio"	0	0	0	569	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P1563"	"Roberga de Lirano de Plumatio"	0	0	0	938	0	1	0	0	0	0	0	0	0	0	0	1	1
+"P1565"	"Rodulfinus de Feraria"	1	0	0	1424	0	1	0	0	0	0	0	0	0	0	0	0	1
+"P1577"	"Rolandinus Petroboni"	1	0	0	1434	0	0	1	0	0	0	0	0	0	0	1	0	0
+"P1579"	"Rolandinus Symonis"	1	0	0	1436	0	0	0	0	0	0	0	0	0	0	1	0	0
+"P1586"	"Romengarda"	0	0	0	1443	0	1	0	0	0	0	0	0	0	0	0	0	1
+"P1589"	"Rosaflore Delay"	0	0	0	367	1	0	0	0	0	0	0	0	0	1	1	0	0
+"P1598"	"Salvettus Petriçoli"	1	0	0	358	0	1	0	1	1	1	0	0	0	0	0	1	0
+"P1599"	"Salvittus Salvitti de Saliceto"	1	0	0	1453	0	1	0	0	0	0	1	0	0	0	1	1	0
+"P1618"	"Saviabona Iacobi Veneciani (Venetiani)"	0	0	0	45	0	0	1	1	0	1	1	0	0	0	1	0	0
+"P1620"	"Scenda de Bochadeferris de Plumatio"	0	0	0	179	0	1	0	0	0	0	0	0	0	0	0	0	1
+"P1621"	"Sciatus"	1	0	0	1473	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P1625"	"Sentexia"	0	0	0	1475	0	0	1	0	0	0	0	0	0	0	1	0	0
+"P1628"	"Sylva de Tridento"	0	0	0	1478	0	1	0	0	0	0	0	0	0	0	1	0	0
+"P1630"	"Symon Alberti"	1	0	0	1480	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P1636"	"Symon"	1	0	0	1486	1	0	0	0	0	0	0	0	0	0	1	0	0
+"P1641"	"Soberana de Aibo"	0	0	0	1491	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P1644"	"Sovranus de Bochadeferris"	1	0	0	179	0	1	0	0	0	0	0	0	0	0	0	1	1
+"P1647"	"Stella Clara de terra Rodiani"	0	0	0	1496	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P1650"	"Stephanus de Boemia"	1	0	1	1499	0	0	0	0	0	0	0	0	0	0	1	0	0
+"P1651"	"Stephanus Falinus"	1	1	0	451	0	0	1	0	0	1	0	0	0	0	1	0	0
+"P1658"	"Taxonus de Florencia"	1	0	0	3	1	0	0	0	0	0	0	0	0	0	1	0	0
+"P1668"	"Thodesca Invani Orasse"	0	0	0	1515	0	1	0	0	0	0	0	0	0	0	0	0	1
+"P1676"	"Thomax Porchontini"	1	0	0	1523	0	0	0	1	0	0	0	0	0	0	1	0	0
+"P1677"	"Thomax"	1	0	0	1524	0	1	0	1	1	1	0	0	0	0	1	1	0
+"P1679"	"Thomaxina de S. Vito"	0	0	0	1526	0	1	0	0	0	0	0	0	0	0	0	1	1
+"P1682"	"Thomaxina Canonici Iohamnis"	0	0	0	1529	0	0	1	0	0	0	0	0	0	0	1	0	0
+"P1684"	"Thomasina Tranchedi"	0	0	0	1531	1	0	0	0	0	0	0	0	0	0	1	0	0
+"P1688"	"Thomaxinus de S. Martino de Regio"	1	1	0	1535	0	0	0	1	0	1	0	0	0	0	1	0	0
+"P1693"	"Thomaxius"	1	1	0	1540	0	0	1	0	0	0	0	0	0	0	0	0	1
+"P1694"	"Tibertus"	1	1	0	1541	0	0	0	1	0	1	0	0	0	0	1	0	0
+"P1695"	"Tixia de Arientis"	0	0	0	1542	0	0	1	0	0	0	0	0	0	0	1	0	0
+"P1697"	"Tranchedinus Ugonis Sachi de terra S. Martini in Arçele"	1	0	0	1351	0	0	1	0	0	0	0	0	0	0	1	0	0
+"P1698"	"Tranchedus de Muxello"	1	0	0	1544	0	1	0	1	1	1	0	0	0	0	0	1	0
+"P1701"	"Trinça"	0	0	0	1547	1	0	0	0	0	0	0	0	0	0	1	0	0
+"P1704"	"Tuçimannus"	1	1	0	1550	0	0	0	1	0	1	0	0	0	0	1	0	0
+"P1706"	"Ubaldinus Bracii"	1	0	0	1552	0	0	0	1	1	1	0	0	0	0	0	1	0
+"P1708"	"Ubaldinus Zaffonis de Montebellio"	1	0	0	1554	0	0	1	0	0	0	0	0	0	0	0	1	0
+"P1711"	"Ubaldinus de Musello"	1	1	0	1557	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P1715"	"Ubertinus Benvenuti de Truglonibus de Montebellio"	1	0	0	1561	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P1720"	"Hugo de Clochis de S. Agata"	1	0	0	1565	0	1	0	0	0	0	0	0	0	0	1	1	0
+"P1721"	"Hugolina de Lirano de Plumatio"	0	0	0	938	0	1	0	1	1	1	0	0	0	0	0	1	0
+"P1722"	"Hugolina de Balugola"	0	1	0	1566	0	1	0	0	0	0	0	0	0	0	0	1	1
+"P1730"	"Hugolinus Chastagnoli"	1	0	1	1574	0	0	0	0	0	0	0	0	0	0	1	0	0
+"P1732"	"Hugolinus"	1	1	0	1576	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P1738"	"Ugolinus de Solegnano"	1	0	0	14	0	1	0	0	0	0	0	0	0	0	1	1	1
+"P1740"	"Ugolinus"	1	0	1	1582	0	1	0	0	0	0	0	0	0	0	1	0	0
+"P1743"	"Hugolinus de Monte Chalvo"	1	0	0	1356	0	1	0	0	0	0	0	0	0	0	1	1	0
+"P1752"	"Ugolottus Ugolotti de Çappulino"	1	0	0	1592	0	0	0	1	0	1	1	0	0	0	0	1	0
+"P1755"	"Huguitio Ferariensis"	1	1	0	1595	0	0	0	0	0	0	0	0	0	0	0	1	0
+"P1760"	"Vacondeus Amati"	1	0	0	1598	0	0	0	1	0	1	0	0	0	0	1	0	0
+"P1763"	"Vandus"	1	1	0	1601	0	0	0	1	0	1	1	0	0	0	0	1	0
+"P1766"	"Vanni Ghiandonis de Florentia"	1	0	1	1603	0	0	0	1	0	1	0	0	0	0	1	0	0
+"P1770"	"Veneria Piçoli"	0	0	0	1185	1	0	0	0	0	0	0	0	0	0	1	0	0
+"P1776"	"Veçosa de Monte Chalvo"	0	0	0	1356	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P1777"	"Veçosius"	1	0	0	1610	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P1779"	"Vingrindellus de S. Helena"	1	0	0	214	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P1784"	"Vitale Bonicontri de Plumatio de la Mane"	1	1	0	259	0	1	0	1	0	1	0	0	0	0	0	1	0
+"P1788"	"Vivelda de Blanchis de S. Helena"	0	0	0	261	0	1	0	1	1	1	0	0	0	0	0	1	0
+"P1791"	"Vivianus Grandonis"	1	1	0	1620	0	1	0	1	1	1	0	0	0	0	0	1	0
+"P1794"	"Vivianus de Feraria"	1	0	0	1623	1	0	0	0	0	0	0	0	0	0	1	0	0
+"P1797"	"Zanboninus Boniohamnis"	1	0	1	1625	0	0	1	0	0	0	0	0	0	0	1	0	0
+"P1798"	"Zanibonus"	1	1	0	1626	0	1	0	0	0	0	0	0	0	0	0	0	1
+"P1799"	"Çaninus Alamanni de Gorçano"	1	0	0	1627	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P1802"	"Zaninus Ghibertini de Costa de Monçorgio"	1	0	0	1630	0	1	0	0	0	0	0	0	0	0	1	1	0
+"P1805"	"Zannibellus de Chalcara"	1	0	0	938	0	1	0	1	1	1	0	0	0	0	0	1	0
+"P1806"	"Zanus de Castello"	1	0	1	1633	0	0	0	0	0	0	0	0	0	0	0	1	0
+"P1815"	"Çonus Magnali"	1	0	0	1642	0	0	0	0	0	0	0	0	0	0	1	0	0
+"P1816"	"Zulittina de Samogia"	0	1	0	1643	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P1820"	"Iacoba de Adygheriis"	0	0	0	57	1	0	0	0	0	0	0	0	0	0	1	0	0
+"P1824"	"Montanarius Pergolani"	1	0	0	1649	0	0	0	1	1	0	0	0	0	0	1	0	0
+"P1835"	"Albergiptus"	1	0	0	38	0	1	0	0	0	0	0	0	0	0	1	0	0
+"P1845"	"Heretica de Vicentia"	0	0	0	1654	1	0	0	0	0	0	0	0	0	0	1	0	0
+"P1846"	"Uxor Alesandri Bochaderospo"	0	0	0	81	1	0	0	0	0	0	0	0	0	0	1	0	0
+"P1847"	"Belottinus"	1	0	1	1655	0	0	1	0	0	0	0	0	0	0	1	0	0
+"P1848"	"Frater Pauli de S. Martino in Arçele"	1	0	0	1280	0	0	1	0	0	0	0	0	0	0	1	0	0
+"P1855"	"uxor Salvetti Petriçoli"	0	0	0	1659	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P1856"	"homo brunus de Sancta Agata"	1	0	0	1660	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P1857"	"Honella"	0	0	0	1624	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P1858"	"Iohannes Ardicionis"	1	0	0	218	0	0	0	1	0	1	1	0	0	0	0	1	0
+"P1859"	"soror heremita de Plumatio"	0	1	0	1661	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P1860"	"famula Beatrixie de Bochadeferris"	0	0	0	1662	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P1863"	"Ventura prior S. Anthonii de strata S. Vitalis"	1	0	0	1665	0	1	0	1	0	1	0	0	0	0	0	1	0
+"P1864"	"uxor Damiani Benvenuti de Blanchis de S. Helena"	0	0	0	261	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P1866"	"Ynugla"	0	0	0	1666	0	1	0	0	0	0	0	0	0	0	0	0	1
+"P1870"	"quidam magister in arte notarie"	1	0	1	1668	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P1871"	"quidam sacerdos"	1	1	0	1669	0	1	0	0	0	0	0	0	0	0	0	1	0
+"P2119"	"quidam barberius"	1	0	0	1678	0	0	1	0	0	0	0	0	0	0	1	0	0

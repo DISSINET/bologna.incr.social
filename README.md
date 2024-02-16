@@ -1,18 +1,28 @@
-# bologna.incr.social
-R syntax of the Gender, kinship, and other social predictors of incrimination in the inquisition register of Bologna (1291–1310): Results from an exponential random graph model manuscript
+# Incriminations in the inquisition register of Bologna, 1291-1310: Data and R code 
+R syntax and network data for the article: Zbíral, David; Riccardo, Katia; Hampejs, Tomáš; Brys, Zoltán. 2024. Gender, kinship, and other social predictors of incrimination in the inquisition register of Bologna (1291–1310): Results from an exponential random graph model. Under review.
 
-## this repo
-contains the R-syntax for analyzing the social patterns of the inquisition register of Bologna (1291–1310).
+The data and analysis are described in the related article (see below).
 
-## related paper
-is available at [this hyperlink](https://www.dissinet.cz/). 
-The two tsv datasets used in the analysis are in the `data` subdirectory.
+## Citation of the repository
+If you use the data or the code in your research, please cite this repository as:
+Riccardo, Katia; Brys, Zoltán; Hampejs, Tomáš; Zbíral, David. 2024. Incriminations in the inquisition register of Bologna, 1291-1310: Data and R code. Available: https://github.com/DISSINET/bologna.incr.social.
 
-## citation
-If you use this code in your research, please cite this repo and/or the paper as:
-...
+## Contents of the repository
+This repository contains:
+- the R-syntax for analyzing the social patterns of incriminations in the inquisition register of Bologna (1291–1310);
+- table of nodes (TSV file);
+- table of edges (TSV file);
+- other supplementary materials for the article.
 
-## dependencies
+The two TSV datasets used in the analysis are in the `data` subdirectory.
+
+## Licence
+The licence to use the data and code is described in the LICENCE file.
+
+## Related article
+Zbíral, David; Riccardo, Katia; Hampejs, Tomáš; Brys, Zoltán. 2024. Gender, kinship, and other social predictors of incrimination in the inquisition register of Bologna (1291–1310): Results from an exponential random graph model. Under review.
+
+## Dependencies
 The code is written in R 4.3.1.
 Following packages are required:
 * parallel 4.3.1 (R Core Team (2023), <https://stat.ethz.ch/R-manual/R-devel/library/parallel/html/00Index.html>.)

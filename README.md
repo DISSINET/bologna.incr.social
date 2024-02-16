@@ -5,6 +5,7 @@ The data and analysis are described in the related article (see below).
 
 ## Citation of the repository
 If you use the data or the code in your research, please cite this repository as:
+
 Riccardo, Katia; Brys, Zoltán; Hampejs, Tomáš; Zbíral, David. 2024. Incriminations in the inquisition register of Bologna, 1291-1310: Data and R code. Available: https://github.com/DISSINET/bologna.incr.social.
 
 ## Contents of the repository

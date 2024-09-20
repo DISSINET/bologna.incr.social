@@ -2,11 +2,11 @@
 ########################################################################################################
 # Project: DISSINET / BolIncr / ERGM
 # Related manuscript : Incriminations in the inquisition register of Bologna (1291–1310) 
-# Authors of the related manuscript : David Zbíral; Katia Riccardo; Tomáš Hampejs; Zoltán Brys
+# Authors of the related manuscript : David Zbíral; Katia Riccardo; Zoltán Brys; Tomáš Hampejs
 #
-# ERGMs - Exponential random graph models
+# ERGMs - Exponential random graph models V2.0 serial incriminators included
 #
-# Authors of the R-Code: Zoltán Brys and David Zbíral 
+# R-Code: Zoltán Brys and David Zbíral 
 #
 # Description: this R code 
 #         1 prepares the environment
@@ -56,8 +56,8 @@
   library("ergMargins")
 
 #input filenames (fn_)
-  fn_inp_incr_nodes <- paste0(getwd(), "/data/df_cleaned_nodes.tsv")
-  fn_inp_incr_edges <- paste0(getwd(), "/data/df_cleaned_edges.tsv")
+  fn_inp_incr_nodes <- paste0(getwd(), "/data/df_nodes.tsv")
+  fn_inp_incr_edges <- paste0(getwd(), "/data/df_edges.tsv")
 #environment prepared, filenames (varaibles starting with fn_) set. 
 ########################################################################################################
 
@@ -197,11 +197,16 @@ eval_sens_res <- function(res_df, vp = "")
 
 # 4 DEFINE NETWORK
 ########################################################################################################
+#creating a binary variable for involved under Florius Vicenza or under Bonifacius of Ferrara
+#for analysis
+  df_incr_nodes$inq_FV_or_inq_BdF = df_incr_nodes$inq_BdF + df_incr_nodes$inq_FV
+
 #define the full graph
 #previous analysis were done in igraph and to maintain consistency we first use igraph
   g_binc <- graph_from_data_frame( d = df_incr_edges , 
                                    directed = TRUE ,
                                    vertices = df_incr_nodes)
+
   
 #data transformation to network format
   net_incr <- intergraph::asNetwork(g_binc)
@@ -210,8 +215,12 @@ eval_sens_res <- function(res_df, vp = "")
   at_nodal_unused <- c("name" ,  
                        "label" , 
                        "ever_incarcerated", 
-                       "ever_tortured", 
-                       "inq_FV"
+                       "ever_tortured",
+                       "inq_FV",
+                       "inq_BdF",
+                       "inq_GP",
+                       "inq_GV",
+                       "non_id_aff"
                        )
   
   delete.vertex.attribute(net_incr, at_nodal_unused)
@@ -235,42 +244,39 @@ eval_sens_res <- function(res_df, vp = "")
 #null modells 
   null_mod_form <- formula(net_incr ~ edges)
 
-#logical matrix for setting male->male as baseline for ERGM nodemix
-  mm_boolean_matrix <- matrix(c(TRUE, TRUE, TRUE, FALSE), nrow=2, by=2)
+#logical matrix for setting femmale->female, male->male as thetas of interest
+  mm_boolean_matrix <- matrix(c(TRUE, FALSE, FALSE, TRUE), nrow=2, by=2)
+
 
 #model
 full_mod_form <- formula(net_incr ~ 
                            
                            #TOPOLOGICAL CONTROL      
                            edges + 
-                           
-                           F(~gwodegree(decay = 0.7, fixed = TRUE), ~nodefactor("inq_BdF") == 0)   +
-                           F(~gwodegree(decay = 0.7, fixed = TRUE), ~nodefactor("inq_BdF") == 1)   +
-                           
-                           gwesp(decay = 0.01, fixed = TRUE, type = "ITP") +
-                           
+                           #include and control serial incriminators - reviewer's 2 request
+                           F(~gwodegree(decay = 0.7, fixed = TRUE), ~nodefactor("inq_FV_or_inq_BdF") == 0) +
+                           F(~gwodegree(decay = 0.7, fixed = TRUE), ~nodefactor("inq_FV_or_inq_BdF") == 1) +
                            
                            #DYADIC CONTROL
                            mutual(by="deponent", levels=2) + 
                            (nodematch("cathar_aff") : nodeofactor("deponent"))+
                            (nodematch("apostle_aff") : nodeofactor("deponent"))+
                            
-                           
                            #DYADIC INPUT
                            (nodematch("family_id") : nodeofactor("deponent")) +
                            (nodemix("sex", levels2 = mm_boolean_matrix ) : nodeofactor("deponent")) +
-                           
                            
                            #NODAL CONTROL 
                            (nodeofactor("redeponent") : nodeofactor("deponent")) + 
                            (nodeofactor("ever_summoned") : nodeofactor("deponent")) +
                            (nodeofactor("ever_pledged") : nodeofactor("deponent")) + 
                            
-                           
                            #NODAL INPUT
                            (nodeofactor("churchperson") : nodeofactor("deponent")) +
-                           (nodeifactor("middling") : nodeofactor("deponent"))
-                       )
+                           F(~(nodeifactor("middling") : nodeofactor("deponent")), ~nodefactor("cathar_aff") == 1) +
+                           F(~(nodeifactor("middling") : nodeofactor("deponent")), ~nodefactor("apostle_aff") == 1)
+                    ) 
+
 #disable warning about ill-defines loglik due to sample constrains
 options(ergm.loglik.warn_dyads=FALSE)
 ########################################################################################################
@@ -278,36 +284,10 @@ options(ergm.loglik.warn_dyads=FALSE)
  
 # 6 FULL ERGM
 ########################################################################################################
-#network level statistic, specifically the number of edges meeting the ERGM terms condition (Table 4).
-  summary(net_incr ~ edges)
-  summary(net_incr ~  F(~gwodegree(decay = 0.7, fixed = TRUE), ~nodefactor("inq_BdF") == 0))
-  summary(net_incr ~  F(~gwodegree(decay = 0.7, fixed = TRUE), ~nodefactor("inq_BdF") == 1))
-  summary(net_incr ~ gwesp(decay = 0.01, fixed = TRUE, type = "ITP"))
-            
-  summary(net_incr ~ mutual(by="deponent", levels=2))
-  summary(net_incr ~ (nodematch("cathar_aff", levels=1) : nodeofactor("deponent")) )
-  summary(net_incr ~ (nodematch("cathar_aff", levels=2) : nodeofactor("deponent")) )
-  summary(net_incr ~ (nodematch("apostle_aff", levels=1) : nodeofactor("deponent")) )
-  summary(net_incr ~ (nodematch("apostle_aff", levels=2) : nodeofactor("deponent")) )
-  
-  summary(net_incr ~ (nodematch("family_id") : nodeofactor("deponent")) )
-  summary(net_incr ~ (nodemix("sex", levels2 = mm_boolean_matrix ) : nodeofactor("deponent"))  )
-  
-  summary(net_incr ~ (nodeofactor("redeponent", level=1) : nodeofactor("deponent")) )
-  summary(net_incr ~ (nodeofactor("redeponent", level=2) : nodeofactor("deponent")) )
-  
-  summary(net_incr ~ (nodeofactor("ever_summoned", level=1) : nodeofactor("deponent")) )
-  summary(net_incr ~ (nodeofactor("ever_summoned", level=2) : nodeofactor("deponent")) )
-  
-  summary(net_incr ~ (nodeofactor("ever_pledged", level=1) : nodeofactor("deponent")) )
-  summary(net_incr ~ (nodeofactor("ever_pledged", level=2) : nodeofactor("deponent")) )
-  
-  summary(net_incr ~ (nodeofactor("churchperson", level=1) : nodeofactor("deponent")) )
-  summary(net_incr ~ (nodeofactor("churchperson", level=2) : nodeofactor("deponent")) )
-  
-  summary(net_incr ~ (nodeofactor("middling", level=1) : nodeofactor("deponent")) )
-  summary(net_incr ~ (nodeofactor("middling", level=2) : nodeofactor("deponent")) )
 
+#network level statistic, specifically the number of edges meeting the ERGM terms condition (Table 4).
+summary(full_mod_form)
+  
 #null model
  ergm_full_null <- ergm(null_mod_form, 
                        constraints =  constraint_ergm,
@@ -319,12 +299,12 @@ options(ergm.loglik.warn_dyads=FALSE)
                         MEc = FALSE, 
                         vp = "full_null_model" 
                             )
+
 #ergm model
-  ergm_full <- ergm(full_mod_form,
-                        constraints = constraint_ergm,
-                        control = control_ergm
-                  )
-  
+  ergm_full <- ergm(full_mod_form , 
+                   constraints =  constraint_ergm,
+                   control = control_ergm)
+ 
   par(mar = c(1, 1, 1, 1))
   mcmc_ergm_full <- ergm::mcmc.diagnostics(ergm_full, vars.per.page = 1)
   gof_ergm_full <- ergm::gof(ergm_full)  
@@ -372,9 +352,11 @@ options(ergm.loglik.warn_dyads=FALSE)
     #save
     df_res_sens <- rbind(df_res_sens, eval_tmp) 
     Sys.sleep(1)
+    cat(" \n----------------------------------", c1 , "-------------------------------- \n")
   }
   
 #resulting tables
   summary(df_res_sens$AIC)
   df_raw_table5 <- eval_sens_res(df_res_sens)
  ########################################################################################################
+  

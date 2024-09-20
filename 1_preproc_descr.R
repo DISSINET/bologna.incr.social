@@ -2,20 +2,22 @@
 ########################################################################################################
 # Project: DISSINET / BolIncr / whole network approach / ERGM
 # Related manuscript : Incriminations in the inquisition register of Bologna (1291–1310) 
-# Authors of the related manuscript : David Zbíral; Katia Riccardo; Tomáš Hampejs; Zoltán Brys
+# Authors of the related manuscript : David Zbíral; Katia Riccardo; Tomáš Hampejs; Zoltan Brys
 #
-# OUTLIER REMOVAL AND DESCRIPTIVES
+# DESCRIPTIVES V2.0
 #
-# Authors of the R-Code: Zoltán Brys and David Zbíral 
+# CHANGES FROM V1.0 to V2.0 
+# Based on reviewers' requests outlier-removal was deleted 
+# and also (infered) non-identified religious affiliation is evaulated.
+#
+# R-Code: Zoltan Brys and David Zbíral 
 #
 # Description: this R code 
 #         1 prepares the environment
 #         2 reads and checks input tables
 #         3 defines descriptive table function and Jaccard calculation function
-#         4 remove outliers
-#         5 generate Table 2. 
-#         6 generate Supporting Information Table 1.
-#         7 saves cleaned TSVs
+#         4 generate Table 2. 
+#         5 generate Supporting Information Table 1.
 ########################################################################################################
 
 
@@ -45,9 +47,6 @@
   fn_inp_incr_nodes <- paste0(getwd(), "/data/df_nodes.tsv")
   fn_inp_incr_edges <- paste0(getwd(), "/data/df_edges.tsv")
   
-#out filenames (fn_)
-  fn_out_incr_nodes <- paste0(getwd(), "/data/df_cleaned_nodes.tsv")
-  fn_out_incr_edges <- paste0(getwd(), "/data/df_cleaned_edges.tsv")
 #environment prepared, filenames (varaibles starting with fn_) set. 
 ########################################################################################################
 
@@ -194,38 +193,8 @@ jaccard_matrixc <- function(data_frame, include = names(data_frame))
 }
 ########################################################################################################
 
-
-# 4 DATA PREPROCESSING: REMOVE OUTLIERS
-########################################################################################################
-#generating outdegree df
-  df_nodes_deponent_ids <- as.data.frame(df_incr_nodes$name[df_incr_nodes$deponent==1]) #deponent ids
-  colnames(df_nodes_deponent_ids) <- "dep_id" 
-  df_nodes_outd <- as.data.frame(table(df_incr_edges$from)) #outdegree
-  df_nodes_deponents_outdeg <- merge(df_nodes_deponent_ids, df_nodes_outd, by.x = "dep_id", by.y = "Var1", all.x = TRUE ) #merge
-  df_nodes_deponents_outdeg$Freq[is.na(df_nodes_deponents_outdeg$Freq)] <- 0 #adding 0s for those deponents, who did not incriminate
-
-  df_nodes_outd_gen <- merge(df_nodes_deponents_outdeg, df_incr_nodes[,c(1,3)], by.x = "dep_id", by.y = "name", all.x = TRUE, all.y = FALSE)
-  rm(df_nodes_deponent_ids, df_nodes_outd, df_nodes_deponents_outdeg) #del tmp dfs
-
-#identify outliers
-  summary(df_nodes_outd_gen$Freq)
-  at_outdeg_th <-  quantile(ecdf(df_nodes_outd_gen$Freq), probs = c(0.975) )
-  df_outliers_id <- df_nodes_outd_gen[df_nodes_outd_gen$Freq > at_outdeg_th,]$dep_id
   
-#remove outliers
-  df_cln_nodes <- df_incr_nodes[!(df_incr_nodes$name %in%  df_outliers_id),]
-  df_cln_edges <- subset(df_incr_edges, subset = (!from %in% df_outliers_id) & (!to %in% df_outliers_id)  )
-  
-#remove those nodes, which are non-deponents and have 0 outdegree (left isolated by the removal of these outliers)
-  df_non_dep_nout <- (df_cln_nodes$name %in% unique(df_cln_edges$to)) | (df_cln_nodes$deponent==1) # has outdegree or deponents
-  df_cln_nodes <- df_cln_nodes[df_non_dep_nout, ]
-  
-#to harmonize variable coding gender male==1
-  df_cln_nodes$sex <- ifelse(df_cln_nodes$sex=="m", 1, 0)
-########################################################################################################
-
-  
-# 5 DESCRIPTIVE TABLE2
+# 4 DESCRIPTIVE TABLE 2
 ########################################################################################################  
 #defining binary, categorical and chr variable name vectors
 at_node_var_chr <- c("name" ,  "label")
@@ -236,6 +205,7 @@ at_node_var_bin <- c(  "sex" ,
                        "cathar_aff", 
                        "apostle_aff", 
                        "other_heterodoxy_aff",
+                       "non_id_aff",
                        "deponent"  , 
                        "redeponent" ,
                        "ever_summoned" , 
@@ -248,61 +218,23 @@ at_node_var_bin <- c(  "sex" ,
                        "inq_BdF")
 
 
-#outlier removed
-  table2B_binary <- descriptives_df(data_frame = df_cln_nodes, 
+#generate descriptives
+  table2_binary <- descriptives_df(data_frame = df_incr_nodes, 
                                     include = at_node_var_bin , 
                                     binaryvarmax = 30,
-                                    pv = "cleanded_sample") 
+                                    pv = "full_dataset") 
   
-  table2B_family_id <- descriptives_df(data_frame = df_cln_nodes, 
+  table2_family<- descriptives_df(data_frame = df_incr_nodes, 
                                        include = "family_id" , 
                                        binaryvarmax = -1,
-                                       pv = "cleanded_sample") 
+                                       pv = "full_dataset") 
 
-#Table 2 raw 
-  table2_binary <- table2B_binary  
-  table2_family  <- table2B_family_id  
 ########################################################################################################  
 
   
 # 6 DESCRIPTIVE AND JACCARD SIMILARITY MEASURE FOR BINARY VARIABLES
 ########################################################################################################  
-#based on the low binary variance, the following variables were excluded from further analysis: 
-#  ever incarcerated and ever tortured.  
-   
 # calcualte Jaccards for all pairs after binary variance based selection
-  at_node_var_bin <- c(  "sex" , 
-                         "churchperson", 
-                         "middling" ,  
-                         "cathar_aff", 
-                         "apostle_aff", 
-                         "other_heterodoxy_aff",
-                         "deponent"  , 
-                         "redeponent" , 
-                         "ever_summoned" ,                 
-                         "inq_FV", 
-                         "inq_GV", 
-                         "inq_GP", 
-                         "inq_BdF")
-  
-  SP1_table_binary_jaccard <- jaccard_matrixc(data_frame = df_cln_nodes, 
+  SP1_table_binary_jaccard <- jaccard_matrixc(data_frame = df_incr_nodes, 
                                           include = at_node_var_bin) 
 ########################################################################################################  
-
-  
-# 7 SAVE OUTLIER REMOVED TABLES
-########################################################################################################
-#writing results the two graphs, data.frame, df_
-  write.table(df_cln_nodes, 
-              file = fn_out_incr_nodes, 
-              sep="\t", 
-              row.names = FALSE,
-              fileEncoding = "UTF-8")
-  
-  write.table(df_cln_edges, 
-              file = fn_out_incr_edges, 
-              sep="\t", 
-              row.names = FALSE,
-              fileEncoding = "UTF-8")
-# prepared TSVs saved  
-########################################################################################################

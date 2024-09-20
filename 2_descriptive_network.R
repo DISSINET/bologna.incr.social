@@ -2,11 +2,11 @@
 ########################################################################################################
 # Project: DISSINET / BolIncr / whole network approach / ERGM
 # Related manuscript : Incriminations in the inquisition register of Bologna (1291–1310) 
-# Authors of the related manuscript : David Zbíral; Katia Riccardo; Tomáš Hampejs; Zoltán Brys
+# Authors of the related manuscript : David Zbíral; Katia Riccardo; Zoltán Brys; Tomáš Hampejs
 #
-# NETWORK DESCRIPTIVES and VISUALIZATION
+# NETWORK DESCRIPTIVES and VIS V2.0
 #
-# Authors of the R-Code: Zoltán Brys and David Zbíral 
+# R-Code: Zoltán Brys and David Zbíral 
 #
 # Description: this R code 
 #         1 prepares the environment
@@ -19,7 +19,7 @@
 
 # CODING CONVENTION
 ########################################################################################################
-#variable names
+#flagvable names
 # at_ denotes attribute/feature/term description vectors
 # fn_ denotes file names (fn_inp_ is input file names, fn_out_ is output file names)
 # df_ denotes data frames
@@ -41,8 +41,8 @@
   library(igraph)
 
 #input filenames (fn_)
-  fn_inp_incr_nodes <- paste0(getwd(), "/data/df_cleaned_nodes.tsv")
-  fn_inp_incr_edges <- paste0(getwd(), "/data/df_cleaned_edges.tsv")
+  fn_inp_incr_nodes <- paste0(getwd(), "/data/df_nodes.tsv")
+  fn_inp_incr_edges <- paste0(getwd(), "/data/df_edges.tsv")
 #environment prepared, filenames (varaibles starting with fn_) set.
 ########################################################################################################
 
@@ -84,14 +84,12 @@
   {
     
     #check inputs
-    if (!class(g_binc) == "igraph") stop("Input data table is not an igraph object!")
+    if (!class(g_binc) == "igraph") stop("Input graph is not an igraph object!")
     
     #check graph
     if (any_loop(g_binc))     stop("Graph object has loops!")
     if (any_multiple(g_binc)) stop("Graph object multiple edges!")
-    
-    #force directed
-    if (is_directed(g_binc)==FALSE) g_binc <- as.directed(g_binc)
+    if (is_directed(g_binc)==FALSE) stop("Graph object is undirected!")
     
     #nodal parameteres
     no_nodes = igraph::vcount(g_binc)
@@ -216,6 +214,10 @@
   outdeg <- as.data.frame(outdeg)
   colnames(outdeg) <- c("degree","all_out")
 
+#outdeg by FV
+  outdeg_FV <- as.data.frame(table(igraph::degree(g_binc, mode = "out"), V(g_binc)$inq_FV)[,2])
+  colnames(outdeg_FV) <- c("FV_out")
+  
 #outdeg by GV
   outdeg_GV <- as.data.frame(table(igraph::degree(g_binc, mode = "out"), V(g_binc)$inq_GV)[,2])
   colnames(outdeg_GV) <- c("GV_out")
@@ -229,7 +231,7 @@
   colnames(outdeg_BdF) <- c("BdF_out")
 
 #outdeg all and by inquisitors, S3 Table
-  outdegs <- cbind(outdeg, outdeg_GV, outdeg_GP, outdeg_BdF)  
+  outdegs <- cbind(outdeg, outdeg_FV, outdeg_GV, outdeg_GP, outdeg_BdF)  
   
 
 #triad census of the observed graph and median random graphs
@@ -294,7 +296,7 @@
   layout1 <- layout.fruchterman.reingold(g_binc)
   
   # color vector based on the "sex" attribute
-  node_colors <- ifelse(V(g_binc)$sex == "1", "blue", "orange")
+  node_colors <- ifelse(V(g_binc)$sex == "m", "blue", "orange")
   
   # shapes based on the "deponent" attribute
   node_shapes <- ifelse((V(g_binc)$deponent == 1), "square", "circle")
@@ -328,17 +330,27 @@
 
   outdegs$log_degree <- log(as.numeric(as.character(outdegs$degree)) + 1)
   outdegs$log_all_out <- log(outdegs$all_out + 1)
+  outdegs$log_FV_out <- log(outdegs$FV_out + 1)
   outdegs$log_GV_out <- log(outdegs$GV_out + 1)
   outdegs$log_GP_out <- log(outdegs$GP_out + 1)
   outdegs$log_BdF_out <- log(outdegs$BdF_out + 1)
  
   #plot S4 Fig.
   plot(outdegs$log_degree, outdegs$log_all_out, type = "l", col = "blue", xlab = "log(outdegree+1)", ylab = "log(freqency+1)", lwd = 3, cex = 1)
-  lines(outdegs$log_degree, outdegs$log_GV_out, col = "red", lwd = 2)
+  lines(outdegs$log_degree, outdegs$log_FV_out, col = "red", lwd = 2)
+  lines(outdegs$log_degree, outdegs$log_GV_out, col = "orange", lwd = 2)
   lines(outdegs$log_degree, outdegs$log_GP_out, col = "green", lwd = 2)
   lines(outdegs$log_degree, outdegs$log_BdF_out, col = "purple", lwd = 2)
-  legend("topright", legend = c("All outdegree", "Guido Vicentinus", "Guido Parmensis", "Bonifacius de Feraria"), col = c("blue", "red", "green", "purple"), lty = 1)
+  legend("topright", legend = c("All outdegree", 
+                                "Florius Vicenza", 
+                                "Guido Vicentinus", 
+                                "Guido Parmensis", 
+                                "Bonifacius de Feraria"), col = c("blue", 
+                                                                  "red", 
+                                                                  "orange" , 
+                                                                  "green", 
+                                                                  "purple"), lty = 1)
   
   #write TIFF
   dev.off()
-########################################################################################################
+########################################################################################################  

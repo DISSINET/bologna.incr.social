@@ -104,8 +104,8 @@
 #defining binary, categorical and chr variable name vectors
   at_node_var_chr <- c("name" ,  
                        "label")
-  at_node_var_cat <- c("family_id")
-  at_node_var_bin <- c(  "sex" , 
+  at_node_var_cat <- c("kinship_id")
+  at_node_var_bin <- c(  "gender" , 
                          "churchperson", 
                          "middling" ,  
                          "cathar_aff", 
@@ -129,13 +129,13 @@
                                     binaryvarmax = 30,
                                     pv = "full_dataset_binary") 
   
-  Table2_family<- descriptives_df(data_frame = df_incr_nodes, 
-                                       include = "family_id" , 
+  Table2_kin<- descriptives_df(data_frame = df_incr_nodes, 
+                                       include = "kinship_id" , 
                                        binaryvarmax = -1,
-                                       pv = "full_dataset_familiy_id")  
+                                       pv = "full_dataset_kinship_id")  
   
-  Table2_nokinship =  sum(Table2_family$frequency==1) # No other kinship group member in the data
-  Table2_kinship    = sum(Table2_family$frequency[Table2_family$frequency>1]) #At least one
+  Table2_nokinship =  sum(Table2_kin$frequency==1) # No other kinship group member in the data
+  Table2_kinship    = sum(Table2_kin$frequency[Table2_kin$frequency>1]) #At least one
 #characteristics of trial subjects generated
 ########################################################################################################  
 
@@ -143,8 +143,10 @@
 # 4 JACCARDS (S1 Table.)
 ########################################################################################################  
 # calcualte Jaccards for all pairs after binary variance based selection
-  S1_Table <- jaccard_matrixc(data_frame = df_incr_nodes, 
-                                          include = at_node_var_bin) 
+  S1_Table_all <- jaccard_matrixc(data_frame = df_incr_nodes, 
+                                          include = at_node_var_bin)
+#adding indices as row names
+  S1_Table_all <- cbind(Index = rownames(S1_Table_all), S1_Table_all)
 ########################################################################################################  
 
 
@@ -173,7 +175,7 @@
   layout1 <- layout.fruchterman.reingold(g_binc)
   
   # color vector based on the "sex" attribute
-  node_colors <- ifelse(V(g_binc)$sex == "1", "blue", "orange")
+  node_colors <- ifelse(V(g_binc)$gender == "1", "blue", "orange")
   
   # shapes based on the "deponent" attribute
   node_shapes <- ifelse((V(g_binc)$deponent == 1), "square", "circle")
@@ -325,6 +327,7 @@
   triad_cens$rat[is.infinite(triad_cens$rat)] <- -1  
   
   S5_Table = triad_cens
+  S5_Table = cbind(Name = triad_nms , triad_cens)
 #S2 Table, S3 Table, S4Fig, S5Table generated
 ########################################################################################################
 
@@ -338,11 +341,25 @@
 #-> We add a generate a node property for the combined var
   V(g_binc)$inq_FV_or_inq_BdF <- df_incr_nodes$inq_BdF + df_incr_nodes$inq_FV
   
-#-> We check Jaccard too
+#-> Checking Jaccard of those variables, which involved in the ERGM
   df_incr_nodes$inq_FV_or_inq_BdF = df_incr_nodes$inq_BdF + df_incr_nodes$inq_FV
-  S1_Table_extended = jaccard_matrixc(data_frame = df_incr_nodes, 
-                                      include = c(at_node_var_bin, "inq_FV_or_inq_BdF"))
-#fine  
+  
+  at_node_var_bin_used_in_ERGM = c(  "gender" , 
+                                     "churchperson", 
+                                     "middling" ,  
+                                     "cathar_aff", 
+                                     "apostle_aff", 
+                                     "deponent"  , 
+                                     "redeponent" ,
+                                     "ever_summoned" , 
+                                     "ever_pledged", 
+                                     "inq_FV_or_inq_BdF"
+                                 )
+  
+  S1_Table_ERGM = jaccard_matrixc(data_frame = df_incr_nodes, 
+                                      include = at_node_var_bin_used_in_ERGM)
+  
+  S1_Table_ERGM <- cbind(Index = rownames(S1_Table_ERGM), S1_Table_ERGM)
 ########################################################################################################
 
 
@@ -405,8 +422,8 @@ full_mod_form <- formula(net_incr ~
                            (nodematch("apostle_aff") : nodeofactor("deponent"))+
                            
                            #DYADIC INPUT
-                           (nodematch("family_id") : nodeofactor("deponent")) +
-                           (nodemix("sex", levels2 = mm_boolean_matrix ) : nodeofactor("deponent")) +
+                           (nodematch("kinship_id") : nodeofactor("deponent")) +
+                           (nodemix("gender", levels2 = mm_boolean_matrix ) : nodeofactor("deponent")) +
                            
                            #NODAL CONTROL 
                            (nodeofactor("redeponent") : nodeofactor("deponent")) + 
@@ -428,29 +445,30 @@ full_mod_form <- formula(net_incr ~
 ########################################################################################################
 
 #network level statistic, specifically the number of edges meeting the ERGM terms condition (Table 4).
-Table4_N = as.data.frame(summary(full_mod_form))
+  Table4_N = as.data.frame(summary(full_mod_form))
 
 #null model
   ergm_full_null <- ergm(null_mod_form, 
                          constraints =  constraint_ergm,
                          control = control_ergm
                          )
-
+#evaulating null modell
   eval_full_null <- eval_ergm(ergm_full_null, 
                               VIFc = FALSE, 
                               MEc = FALSE, 
                               vp = "full_null_model"
                               )
-
-#ergm model
+  
+#ergm full model (all nodes and edges)
   ergm_full <- ergm(full_mod_form , 
                     constraints =  constraint_ergm,
                     control = control_ergm)
   
 #evaulation of ergm full
   par(mar = c(1, 1, 1, 1))
-  mcmc_ergm_full <- ergm::mcmc.diagnostics(ergm_full, vars.per.page = 1) #S6 Document. MCMC
-  gof_ergm_full <- ergm::gof(ergm_full)  # S7 Document. Goodness of Fit diagnostic of the main model.
+  S6 <- ergm::mcmc.diagnostics(ergm_full, vars.per.page = 1) #S6 Document. MCMC
+  S7 <- ergm::gof(ergm_full)  # S7 Document. Goodness of Fit diagnostic of the main model.
+  #before plotting bergm, tergm overwrite have to be detached, only ergm S3 object should stay
 
   eval_full <- eval_ergm(ergm_full, 
                          VIFc = TRUE, 
@@ -509,20 +527,18 @@ for (c1 in 1:100)
 }
 
 #resulting tables
-Table5_AIC = summary(df_res_sens$AIC)
-Table5 <- eval_sens_res(df_res_sens, jp10mp90 = TRUE)
-Table5 <- subset(df_raw_table5, 
-                        select = c("ergm_term", "value", "p10", "med", "p90"))
+  Table5_AIC = summary(df_res_sens$AIC)
+  Table5 <- eval_sens_res(df_res_sens, jp10mp90 = TRUE)
 ########################################################################################################
 
 
 # 14 SAVE RESULTS
 ########################################################################################################
-#plots are saved as TIFFS.
+#plots are saves as TIFFS.
 
 #R-objects
 save(Table2_binary,
-     Table2_family,
+     Table2_kin,
      Table2_kinship,
      Table2_nokinship,
      
@@ -534,7 +550,8 @@ save(Table2_binary,
      Table5_AIC,
      Table5,
      
-     S1_Table,
+     S1_Table_all,
+     S1_Table_ERGM
      S1_Table_extended,
      S2_Table,
      S3_Table,
@@ -542,6 +559,6 @@ save(Table2_binary,
      S6,
      S7,
      
-     file="Results.RData"
-     )
+     file="Main_Results.RData"
+    )
 ########################################################################################################

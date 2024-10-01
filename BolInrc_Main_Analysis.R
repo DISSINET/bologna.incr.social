@@ -518,7 +518,7 @@ Table5 <- subset(df_raw_table5,
 
 # 14 SAVE RESULTS
 ########################################################################################################
-#plots are saves as TIFFS.
+#plots are saved as TIFFS.
 
 #R-objects
 save(Table2_binary,

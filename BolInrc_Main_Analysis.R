@@ -483,7 +483,7 @@ Table4_N = as.data.frame(summary(full_mod_form))
 #
 # also results can slightly differ in the paper due to random
 
-for (c1 in 1:2)
+for (c1 in 1:100)
 {
   #reseting baseline
   net_incr <- base_net_incr 
@@ -542,6 +542,6 @@ save(Table2_binary,
      S6,
      S7,
      
-     file="Bologna_Incriminations_Results.RData"
+     file="Results.RData"
      )
 ########################################################################################################

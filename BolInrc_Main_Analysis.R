@@ -465,10 +465,10 @@ full_mod_form <- formula(net_incr ~
                     control = control_ergm)
   
 #evaulation of ergm full
-  par(mar = c(1, 1, 1, 1))
+  par(mar = c(2, 1, 2, 1))
   S6 <- ergm::mcmc.diagnostics(ergm_full, vars.per.page = 1) #S6 Document. MCMC
   S7 <- ergm::gof(ergm_full)  # S7 Document. Goodness of Fit diagnostic of the main model.
-  #before plotting bergm, tergm overwrite have to be detached, only ergm S3 object should stay
+  #before plotting bergm, tergm overwrite have to be offed/detached, only ergm gof.plot S3 object should stay
 
   eval_full <- eval_ergm(ergm_full, 
                          VIFc = TRUE, 
@@ -552,7 +552,7 @@ save(Table2_binary,
      
      S1_Table_all,
      S1_Table_ERGM
-     S1_Table_extended,
+
      S2_Table,
      S3_Table,
      S5_Table,
@@ -560,5 +560,5 @@ save(Table2_binary,
      S7,
      
      file="Main_Results.RData"
-    )
+     )
 ########################################################################################################

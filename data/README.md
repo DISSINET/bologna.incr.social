@@ -7,4 +7,4 @@
   in case of non-deponents at trial circumstance variables (redeponent,ever_summoned,ever_pledged,ever_incarcerated,ever_tortured values) 0 represents not applicable <br/>
 
 ## data encoding
-  detailed data description is available in the article
+  description of the columns is available in the artice

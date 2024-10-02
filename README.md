@@ -1,5 +1,5 @@
 # Incriminations in the inquisition register of Bologna, 1291-1310: Data and R code 
-R syntax and network data for the article: Zbíral, David; Riccardo, Katia; Hampejs, Tomáš; Brys, Zoltán. 2024. Gender, kinship, and other social predictors of incrimination in the inquisition register of Bologna (1291–1310): Results from an exponential random graph model. Under review.
+R syntax and network data for the article: Zbíral, David; Riccardo, Katia; Hampejs, Tomáš; Brys, Zoltán. 2024. Gender, kinship, and other social predictors of incrimination in the inquisition register of Bologna (1291–1310): Results from an exponential random graph model. (Currently under review)
 
 The data and analysis are described in the related article (see below).
 
@@ -13,7 +13,6 @@ This repository contains:
 - the R-syntax for analyzing the social patterns of incriminations in the inquisition register of Bologna (1291–1310);
 - table of nodes (TSV file);
 - table of edges (TSV file);
-- other supplementary materials for the article.
 
 The two TSV datasets used in the analysis are in the `data` subdirectory.
 
@@ -21,10 +20,10 @@ The two TSV datasets used in the analysis are in the `data` subdirectory.
 The licence to use the data and code is described in the LICENCE file.
 
 ## Related article
-Zbíral, David; Riccardo, Katia; Hampejs, Tomáš; Brys, Zoltán. 2024. Gender, kinship, and other social predictors of incrimination in the inquisition register of Bologna (1291–1310): Results from an exponential random graph model. Under review.
+Zbíral, David; Riccardo, Katia; Hampejs, Tomáš; Brys, Zoltán. 2024. Gender, kinship, and other social predictors of incrimination in the inquisition register of Bologna (1291–1310): Results from an exponential random graph model. (Under review.)
 
 ## Dependencies
-The code is written in R 4.3.1.
+The code is written in R 4.3.1 and uses parallel computing.
 Following packages are required:
 * parallel 4.3.1 (R Core Team (2023), <https://stat.ethz.ch/R-manual/R-devel/library/parallel/html/00Index.html>.)
 * Matrix 1.6.1 (Bates D, Maechler M, Jagan M (2023). _Matrix: Sparse and Dense Matrix Classes and Methods_. R package version 1.6-1,

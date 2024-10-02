@@ -4,7 +4,7 @@
 # Related manuscript : Incriminations in the inquisition register of Bologna (1291–1310) 
 # Authors of the related manuscript : David Zbíral; Katia Riccardo; Tomáš Hampejs; Zoltan Brys
 #
-# R-code of special functions.
+# R-code of auxiliary functions.
 #
 # R-code: Zoltan Brys and David Zbíral 
 #

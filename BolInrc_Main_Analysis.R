@@ -107,7 +107,7 @@
   at_node_var_cat <- c("kinship_id")
   at_node_var_bin <- c(  "gender" , 
                          "churchperson", 
-                         "middling" ,  
+                         "middle_class" ,  
                          "cathar_aff", 
                          "apostle_aff", 
                          "other_heterodoxy_aff",
@@ -346,7 +346,7 @@
   
   at_node_var_bin_used_in_ERGM = c(  "gender" , 
                                      "churchperson", 
-                                     "middling" ,  
+                                     "middle_class" ,  
                                      "cathar_aff", 
                                      "apostle_aff", 
                                      "deponent"  , 
@@ -431,9 +431,10 @@ full_mod_form <- formula(net_incr ~
                            (nodeofactor("ever_pledged") : nodeofactor("deponent")) + 
                            
                            #NODAL INPUT
+                           (nodeofactor("gender") : nodeofactor("deponent")) +
                            (nodeofactor("churchperson") : nodeofactor("deponent")) +
-                           F(~(nodeifactor("middling") : nodeofactor("deponent")), ~nodefactor("cathar_aff") == 1) +
-                           F(~(nodeifactor("middling") : nodeofactor("deponent")), ~nodefactor("apostle_aff") == 1)
+                           F(~(nodeifactor("middle_class") : nodeofactor("deponent")), ~nodefactor("cathar_aff") == 1) +
+                           F(~(nodeifactor("middle_class") : nodeofactor("deponent")), ~nodefactor("apostle_aff") == 1)
 ) 
 
 #disable warning about ill-defines loglik due to sample constrains

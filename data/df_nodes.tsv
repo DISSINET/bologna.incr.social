@@ -1,4 +1,4 @@
-"name"	"label"	"gender"	"churchperson"	"middling"	"kinship_id"	"cathar_aff"	"apostle_aff"	"other_heterodoxy_aff"	"deponent"	"redeponent"	"ever_summoned"	"ever_pledged"	"ever_incarcerated"	"ever_tortured"	"inq_FV"	"inq_GV"	"inq_GP"	"inq_BdF"	"non_id_aff"
+"name"	"label"	"gender"	"churchperson"	"middle_class"	"kinship_id"	"cathar_aff"	"apostle_aff"	"other_heterodoxy_aff"	"deponent"	"redeponent"	"ever_summoned"	"ever_pledged"	"ever_incarcerated"	"ever_tortured"	"inq_FV"	"inq_GV"	"inq_GP"	"inq_BdF"	"non_id_aff"
 "P0377"	"Bonacursius de Florentia"	1	0	1	1	0	0	1	1	0	1	1	0	0	0	0	1	0	0
 "P0510"	"Cursius Neri Bonelle de Florentia"	1	0	1	2	1	0	0	0	0	0	1	0	0	0	1	0	0	0
 "P0562"	"Donatus Partis de Florentia"	1	0	1	3	1	0	0	1	1	1	1	0	1	0	1	0	0	0

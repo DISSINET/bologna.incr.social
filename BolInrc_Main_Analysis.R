@@ -263,7 +263,8 @@
   outdegs$log_BdF_out <- log(outdegs$BdF_out + 1)
 
 #plot S4 Fig.
-  plot(outdegs$log_degree, outdegs$log_all_out, type = "l", col = "blue", xlab = "log(outdegree+1)", ylab = "log(freqency+1)", lwd = 3, cex = 1)
+  plot(outdegs$log_degree, outdegs$log_all_out, type = "l", col = "blue", 
+       xlab = "log(outdegree+1)", ylab = "log(freqency+1)", lwd = 3, cex = 1)
   lines(outdegs$log_degree, outdegs$log_FV_out, col = "red", lwd = 2)
   lines(outdegs$log_degree, outdegs$log_GV_out, col = "orange", lwd = 2)
   lines(outdegs$log_degree, outdegs$log_GP_out, col = "green", lwd = 2)
@@ -308,7 +309,10 @@
   rnd_triad_cens <- NULL
   for (c1 in 1:10000)
   {
-    tmp_random_graph <- igraph::erdos.renyi.game( n= vcount(g_binc), p.or.m = ecount(g_binc), type="gnm", directed = TRUE ) 
+    tmp_random_graph <- igraph::erdos.renyi.game( n        = vcount(g_binc), 
+                                                  p.or.m   = ecount(g_binc), 
+                                                  type     = "gnm", 
+                                                  directed = TRUE ) 
     tmp_triad_cens <- as.data.frame(triad_census(tmp_random_graph))
     rnd_triad_cens <- rbind(rnd_triad_cens, t(tmp_triad_cens))
   }
@@ -410,31 +414,31 @@
 #model
 full_mod_form <- formula(net_incr ~ 
                            
-                           #TOPOLOGICAL CONTROL      
-                           edges + 
-                           #outdegree in two subsets
-                           F(~gwodegree(decay = 0.7, fixed = TRUE), ~nodefactor("inq_FV_or_inq_BdF") == 0) +
-                           F(~gwodegree(decay = 0.7, fixed = TRUE), ~nodefactor("inq_FV_or_inq_BdF") == 1) +
-                           
-                           #DYADIC CONTROL
-                           mutual(by="deponent", levels=2) + 
-                           (nodematch("cathar_aff") : nodeofactor("deponent"))+
-                           (nodematch("apostle_aff") : nodeofactor("deponent"))+
-                           
-                           #DYADIC INPUT
-                           (nodematch("kinship_id") : nodeofactor("deponent")) +
-                           (nodemix("gender", levels2 = mm_boolean_matrix ) : nodeofactor("deponent")) +
-                           
-                           #NODAL CONTROL 
-                           (nodeofactor("redeponent") : nodeofactor("deponent")) + 
-                           (nodeofactor("ever_summoned") : nodeofactor("deponent")) +
-                           (nodeofactor("ever_pledged") : nodeofactor("deponent")) + 
-                           
-                           #NODAL INPUT
-                           (nodeofactor("gender") : nodeofactor("deponent")) +
-                           (nodeofactor("churchperson") : nodeofactor("deponent")) +
-                           F(~(nodeifactor("middle_class") : nodeofactor("deponent")), ~nodefactor("cathar_aff") == 1) +
-                           F(~(nodeifactor("middle_class") : nodeofactor("deponent")), ~nodefactor("apostle_aff") == 1)
+   #TOPOLOGICAL CONTROL      
+   edges + 
+   #outdegree in two subsets
+   F(~gwodegree(decay = 0.7, fixed = TRUE), ~nodefactor("inq_FV_or_inq_BdF") == 0) +
+   F(~gwodegree(decay = 0.7, fixed = TRUE), ~nodefactor("inq_FV_or_inq_BdF") == 1) +
+   
+   #DYADIC CONTROL
+   mutual(by="deponent", levels=2) + 
+   (nodematch("cathar_aff") : nodeofactor("deponent"))+
+   (nodematch("apostle_aff") : nodeofactor("deponent"))+
+   
+   #DYADIC INPUT
+   (nodematch("kinship_id") : nodeofactor("deponent")) +
+   (nodemix("gender", levels2 = mm_boolean_matrix ) : nodeofactor("deponent")) +
+   
+   #NODAL CONTROL 
+   (nodeofactor("redeponent") : nodeofactor("deponent")) + 
+   (nodeofactor("ever_summoned") : nodeofactor("deponent")) +
+   (nodeofactor("ever_pledged") : nodeofactor("deponent")) + 
+   
+   #NODAL INPUT
+   (nodeofactor("gender") : nodeofactor("deponent")) +
+   (nodeofactor("churchperson") : nodeofactor("deponent")) +
+   F(~(nodeifactor("middle_class") : nodeofactor("deponent")), ~nodefactor("cathar_aff") == 1) +
+   F(~(nodeifactor("middle_class") : nodeofactor("deponent")), ~nodefactor("apostle_aff") == 1)
 ) 
 
 #disable warning about ill-defines loglik due to sample constrains
@@ -472,8 +476,8 @@ full_mod_form <- formula(net_incr ~
   #before plotting bergm, tergm overwrite have to be offed/detached, only ergm gof.plot S3 object should stay
 
   eval_full <- eval_ergm(ergm_full, 
-                         VIFc = FALSE, 
-                         MEc  = FALSE, 
+                         VIFc = TRUE, 
+                         MEc  = TRUE, 
                          vp   = "ergm_full_modell"
                          )
   Table4 = eval_full #plus NTable4 
@@ -525,8 +529,8 @@ for (c1 in 4:100)
   )
   #eval
   eval_tmp <- eval_ergm(ergm_tmp, 
-                        VIFc = TRUE, 
-                        MEc  = TRUE, 
+                        VIFc = FALSE, 
+                        MEc  = FALSE, 
                         vp   = paste0(as.character(c1), "_", as.character(sum(sna::degree(net_incr))/2)) #cycle_edges
   )
   #save
@@ -542,8 +546,7 @@ for (c1 in 4:100)
 
 # 14 SAVE RESULTS
 ########################################################################################################
-#plots are saves as TIFFS.
-
+#plots are saved as TIFFS.
 #R-objects
 save(Table2_binary,
      Table2_kin,
@@ -569,4 +572,5 @@ save(Table2_binary,
      
      file="Main_Results.RData"
      )
+stop()
 ########################################################################################################

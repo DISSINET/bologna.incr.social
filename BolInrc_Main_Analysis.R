@@ -124,15 +124,15 @@
                          "inq_BdF")
 
 #generate descriptives
-  Table2_binary <- descriptives_df(data_frame = df_incr_nodes, 
-                                    include = at_node_var_bin , 
-                                    binaryvarmax = 30,
-                                    pv = "full_dataset_binary") 
+  Table2_binary <- descriptives_df(data_frame     = df_incr_nodes, 
+                                    include       = at_node_var_bin , 
+                                    binaryvarmax  = 30,
+                                    pv            = "full_dataset_binary") 
   
-  Table2_kin<- descriptives_df(data_frame = df_incr_nodes, 
-                                       include = "kinship_id" , 
+  Table2_kin<- descriptives_df(data_frame           = df_incr_nodes, 
+                                       include      = "kinship_id" , 
                                        binaryvarmax = -1,
-                                       pv = "full_dataset_kinship_id")  
+                                       pv           = "full_dataset_kinship_id")  
   
   Table2_nokinship =  sum(Table2_kin$frequency==1) # No other kinship group member in the data
   Table2_kinship    = sum(Table2_kin$frequency[Table2_kin$frequency>1]) #At least one
@@ -153,7 +153,7 @@
 # 5 DEFINE GRAPH 
 ########################################################################################################
 #define the graph
-  g_binc <- graph_from_data_frame( d = df_incr_edges , 
+  g_binc <- graph_from_data_frame( d        = df_incr_edges , 
                                    directed = TRUE ,
                                    vertices = df_incr_nodes)
 ########################################################################################################
@@ -255,11 +255,11 @@
        pointsize = 24
   )
 
-  outdegs$log_degree <- log(as.numeric(as.character(outdegs$degree)) + 1)
+  outdegs$log_degree  <- log(as.numeric(as.character(outdegs$degree)) + 1)
   outdegs$log_all_out <- log(outdegs$all_out + 1)
-  outdegs$log_FV_out <- log(outdegs$FV_out + 1)
-  outdegs$log_GV_out <- log(outdegs$GV_out + 1)
-  outdegs$log_GP_out <- log(outdegs$GP_out + 1)
+  outdegs$log_FV_out  <- log(outdegs$FV_out + 1)
+  outdegs$log_GV_out  <- log(outdegs$GV_out + 1)
+  outdegs$log_GP_out  <- log(outdegs$GP_out + 1)
   outdegs$log_BdF_out <- log(outdegs$BdF_out + 1)
 
 #plot S4 Fig.
@@ -356,7 +356,7 @@
                                      "inq_FV_or_inq_BdF"
                                  )
   
-  S1_Table_ERGM = jaccard_matrixc(data_frame = df_incr_nodes, 
+  S1_Table_ERGM = jaccard_matrixc(data_frame  = df_incr_nodes, 
                                       include = at_node_var_bin_used_in_ERGM)
   
   S1_Table_ERGM <- cbind(Index = rownames(S1_Table_ERGM), S1_Table_ERGM)
@@ -472,9 +472,9 @@ full_mod_form <- formula(net_incr ~
   #before plotting bergm, tergm overwrite have to be offed/detached, only ergm gof.plot S3 object should stay
 
   eval_full <- eval_ergm(ergm_full, 
-                         VIFc = TRUE, 
-                         MEc = TRUE, 
-                         vp = "ergm_full_modell"
+                         VIFc = FALSE, 
+                         MEc  = FALSE, 
+                         vp   = "ergm_full_modell"
                          )
   Table4 = eval_full #plus NTable4 
 ########################################################################################################
@@ -483,26 +483,33 @@ full_mod_form <- formula(net_incr ~
 # 13 SENSITIVITY ANALYSIS
 ########################################################################################################
 #start parameters
-  base_net_incr <- net_incr #save baseline net_incr
+  base_net_incr  <- net_incr #save baseline net_incr
   
-  at_n_edges <- sum(sna::degree(base_net_incr))/2  #number of edges baseline
+  at_n_edges     <- sum(sna::degree(base_net_incr))/2  #number of edges baseline
   at_ten_p_edges <- round(0.1 * at_n_edges) #10% of the edges number
-  val_eids <- network::valid.eids(base_net_incr) #valid edge ids
+  val_eids       <- network::valid.eids(base_net_incr) #valid edge ids
   
   df_res_sens <- NULL #results df of the sensitivity analysis
 
 #repeated ERGM with 10% rand removed edges
   
 #NOTE:
-# random 10% removal of edges can remove too much edges for
+# very rarely but, random 10% removal of edges can remove too much edges for
 #  F(nodefactor("cathar_aff")==1)~nodeifactor.middling.1:nodeofactor.deponent.1
 #  F(nodefactor("apostle_aff")==1)~nodeifactor.middling.1:nodeofactor.deponent.1
-# to be evaulated, this case evaulation of the model stop
-# this case c1 to be adapted and continued
+# to be evaulated, this case evaulation of the model stops
+#
+# this case c1 to be adapted and continued,
+#
+# also sometimes bergm sometimes gets lots in error-handling, so
+# VIF and MARGINAL effects calculation is turned off, 
+# if it turned on sometimes VIF/AME evaulation stops
+#
+# handling, these rare cases: adapt c1 and continue the cycle
 #
 # also results can slightly differ in the paper due to random
 
-for (c1 in 1:100)
+for (c1 in 4:100)
 {
   #reseting baseline
   net_incr <- base_net_incr 
@@ -519,8 +526,8 @@ for (c1 in 1:100)
   #eval
   eval_tmp <- eval_ergm(ergm_tmp, 
                         VIFc = TRUE, 
-                        MEc = TRUE, 
-                        vp = paste0(as.character(c1), "_", as.character(sum(sna::degree(net_incr))/2)) #cycle_edges
+                        MEc  = TRUE, 
+                        vp   = paste0(as.character(c1), "_", as.character(sum(sna::degree(net_incr))/2)) #cycle_edges
   )
   #save
   df_res_sens <- rbind(df_res_sens, eval_tmp) 
@@ -529,7 +536,7 @@ for (c1 in 1:100)
 
 #resulting tables
   Table5_AIC = summary(df_res_sens$AIC)
-  Table5 <- eval_sens_res(df_res_sens, jp10mp90 = TRUE)
+  Table5    <- eval_sens_res(df_res_sens, jp10mp90 = TRUE)
 ########################################################################################################
 
 

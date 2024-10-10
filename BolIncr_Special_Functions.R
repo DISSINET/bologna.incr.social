@@ -343,7 +343,7 @@ eval_sens_res <- function(res_df, jp10mp90 = TRUE)
 {
   #checking input
   if (!is(res_df, "data.frame")) {stop("MEc is not a logical object")}
-  if (!is(vp, "character")) {stop("vp is not a string object")}
+  if (!is(jp10mp90, "logical")) {stop("vp is not a string object")}
   
   #terms
   tmp_ergm_terms <- unique(res_df$ergm_term)

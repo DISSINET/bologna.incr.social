@@ -1,6 +1,7 @@
 # METADATA 
 ########################################################################################################
 # Project: MUNI/ DISSINET 
+#
 # Related manuscript : Incriminations in the inquisition register of Bologna (1291–1310) 
 # Authors of the related manuscript : David Zbíral; Katia Riccardo; Tomáš Hampejs; Zoltan Brys
 #
@@ -28,7 +29,8 @@
 ########################################################################################################
 #memory check
   rm(list = ls()) #deleting the memory
-  if (as.numeric(gsub(".*:(\\s*)(\\d+)(\\s+)\\d+.*", "\\2", (system("free -m", intern = TRUE)[2])))<2048) 
+  if (as.numeric(gsub(".*:(\\s*)(\\d+)(\\s+)\\d+.*", "\\2", (system("free -m", 
+                                                                    intern = TRUE)[2])))<2048) 
     stop("Memory is likely not will be enough for running an ERGM!") #checking free memory
 
 #R-check
@@ -52,8 +54,8 @@
   library("intergraph")
   library("ergMargins")
 
-#special functions
-  source("BolIncr_Special_Functions.R")
+#read aux functions
+  source("BolIncr_AUX_Functions.R")
 
 #input filenames (fn_)
   fn_inp_incr_nodes <- paste0(getwd(), "/data/df_nodes.tsv")
@@ -283,7 +285,7 @@
   dev.off()
 
 #S5 Table
-#Triad census of the observed graph and the median values of 10,000 random graphs of similar size.
+#Triad census of the observed graph and median values of 10,000 random graphs of similar size.
   triad_cens <- NULL
   triad_cens <- as.data.frame(igraph::triad_census(g_binc))
   triad_nms <- c("003",
@@ -503,7 +505,6 @@ full_mod_form <- formula(net_incr ~
 #  F(nodefactor("apostle_aff")==1)~nodeifactor.middling.1:nodeofactor.deponent.1
 # to be evaulated, this case evaulation of the model stops
 #
-# this case c1 to be adapted and continued,
 #
 # also sometimes bergm sometimes gets lots in error-handling, so
 # VIF and MARGINAL effects calculation is turned off, 
@@ -529,9 +530,9 @@ for (c1 in 4:100)
   )
   #eval
   eval_tmp <- eval_ergm(ergm_tmp, 
-                        VIFc = FALSE, 
-                        MEc  = FALSE, 
-                        vp   = paste0(as.character(c1), "_", as.character(sum(sna::degree(net_incr))/2)) #cycle_edges
+      VIFc = FALSE, 
+      MEc  = FALSE, 
+      vp   = paste0(as.character(c1), "_", as.character(sum(sna::degree(net_incr))/2)) #cycle_edges
   )
   #save
   df_res_sens <- rbind(df_res_sens, eval_tmp) 
@@ -561,7 +562,6 @@ save(Table2_binary,
      Table5_AIC,
      Table5,
      
-     S1_Table_all,
      S1_Table_ERGM,
 
      S2_Table,

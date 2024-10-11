@@ -1,13 +1,13 @@
 # METADATA 
 ########################################################################################################
 # Project: MUNI/ DISSINET 
+#
 # Related manuscript : Incriminations in the inquisition register of Bologna (1291–1310) 
 # Authors of the related manuscript : David Zbíral; Katia Riccardo; Tomáš Hampejs; Zoltan Brys
 #
 # R-code of auxiliary functions.
 #
 # R-code: Zoltan Brys and David Zbíral 
-#
 ########################################################################################################
 
 
@@ -29,7 +29,7 @@ descriptives_df <- function(data_frame, include = names(data_frame) , binaryvarm
   if (!class(data_frame) == "data.frame") stop("Input data table is not a data frame!")
   if (is.null(include)) stop("No column names defined")
   if (sum(is.na.data.frame(data_frame))>0) stop("NAs in the data frame")
-  if (sum(!(include %in% names(data_frame)))>0) stop ("One include variable name is not a column name")
+  if (sum(!(include %in% names(data_frame)))>0) stop("One include variable name is not a col name")
   
   #subset int columns and factorize them
   data_frame <- subset(data_frame, select = include)
@@ -65,7 +65,8 @@ descriptives_df <- function(data_frame, include = names(data_frame) , binaryvarm
   if (binaryvarmax > -1) 
   {
     n1 <- dim(data_frame)[1]
-    descriptive_table$binvar <- n1 * (descriptive_table$percentage/100) * (1 - (descriptive_table$percentage/100))
+    descriptive_table$binvar <- n1 * (descriptive_table$percentage/100) *
+      (1 - (descriptive_table$percentage/100))
     descriptive_table$binvar_include <- (descriptive_table$binvar > binaryvarmax)
   }
   
@@ -101,7 +102,7 @@ jaccard_matrixc <- function(data_frame, include = names(data_frame))
   if (!class(data_frame) == "data.frame") stop("Input data table is not a data frame!")
   if (is.null(include)) stop("No column names defined")
   if (sum(is.na.data.frame(data_frame))>0) stop("NAs in the data frame")
-  if (sum(!(include %in% names(data_frame)))>0) stop ("One include variable name is not a column name")
+  if (sum(!(include %in% names(data_frame)))>0) stop("One include variable name is not a col name")
   
   #subset int columns
   data_frame <- subset(data_frame, select = include)
@@ -126,7 +127,7 @@ jaccard_matrixc <- function(data_frame, include = names(data_frame))
 ########################################################################################################
 
 
-# FUNCTION: simple, readable, network descriptive table 
+# FUNCTION: network descriptive table 
 ########################################################################################################
 #input: igraph object
 #output: concaneted table with basic descriptives
@@ -343,18 +344,17 @@ eval_sens_res <- function(res_df, jp10mp90 = TRUE)
 {
   #checking input
   if (!is(res_df, "data.frame")) {stop("MEc is not a logical object")}
-  if (!is(jp10mp90, "logical")) {stop("vp is not a string object")}
-  
+
   #terms
   tmp_ergm_terms <- unique(res_df$ergm_term)
   
   sum_res <- NULL #result of sum
   for (i in tmp_ergm_terms)
   {
-    sum_res <- rbind(sum_res, c(i, "Beta",  csummary(res_df[res_df$ergm_term==as.character(i), ]$B)) )
-    sum_res <- rbind(sum_res, c(i, "z",  csummary(res_df[res_df$ergm_term==as.character(i), ]$z)) )
-    sum_res <- rbind(sum_res, c(i, "p",  csummary(res_df[res_df$ergm_term==as.character(i), ]$p))    )              
-    sum_res <- rbind(sum_res, c(i, "AME",  csummary(res_df[res_df$ergm_term==as.character(i), ]$AME)) )
+    sum_res <- rbind(sum_res, c(i, "Beta",csummary(res_df[res_df$ergm_term==as.character(i), ]$B)) )
+    sum_res <- rbind(sum_res, c(i, "z", csummary(res_df[res_df$ergm_term==as.character(i), ]$z)) )
+    sum_res <- rbind(sum_res, c(i, "p", csummary(res_df[res_df$ergm_term==as.character(i), ]$p))    )              
+    sum_res <- rbind(sum_res, c(i, "AME", csummary(res_df[res_df$ergm_term==as.character(i), ]$AME)) )
   }
   
   sum_res <- as.data.frame(sum_res)

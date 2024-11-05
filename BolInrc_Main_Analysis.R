@@ -514,7 +514,7 @@ full_mod_form <- formula(net_incr ~
 #
 # also results can slightly differ in the paper due to random
 
-for (c1 in 4:100)
+for (c1 in 1:100)
 {
   #reseting baseline
   net_incr <- base_net_incr 
